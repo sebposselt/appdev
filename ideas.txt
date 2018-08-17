@@ -1,0 +1,19 @@
+ideas: 
+	gamer-profile
+	age
+	game
+	location
+	language
+	rank/league considerations 
+	platform
+	play-style (e.g support, frontline, sniper, etc)
+	(gender options)?
+
+
+	potential features
+	(Discord)?
+
+
+
+	a personal gamer-profile and a user-rated gamer-profile.
+	
