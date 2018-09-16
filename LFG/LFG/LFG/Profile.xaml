@@ -14,7 +14,79 @@
                 Text="Match Making"
                 Clicked="Matchmaking_Clicked_Button"/>
             <Button/>
-            
+
+            <Picker x:Name="Region">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>North America</x:String>
+                        <x:String>South America</x:String>
+                        <x:String>Europe</x:String>
+                        <x:String>Ociania</x:String>
+                        <x:String>Africa</x:String>
+                        <x:String>Asia</x:String>
+                        <x:String>Russia</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker x:Name="Language">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>English</x:String>
+                        <x:String>Italian</x:String>
+                        <x:String>French</x:String>
+                        <x:String>Chinese</x:String>
+                        <x:String>Japanese</x:String>
+                        <x:String>Korean</x:String>
+                        <x:String>Russian</x:String>
+                        <x:String>Portuguese</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker x:Name="Age">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Bellow 18</x:String>
+                        <x:String>18-25</x:String>
+                        <x:String>26-35</x:String>
+                        <x:String>36-45</x:String>
+                        <x:String>46-55</x:String>
+                        <x:String>56-65</x:String>
+                        <x:String>65+</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker x:Name="Platform">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Xbox</x:String>
+                        <x:String>Playstation</x:String>
+                        <x:String>PC</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Username"/>
+                        <TextCell Text="Game 1"/>
+                        <TextCell Text="Game 2"/>
+                        <TextCell Text="Game 3"/>
+                        <TextCell Text="Game 4"/>
+                        <TextCell Text="Game 5"/>
+                        <TextCell Text="Game 1"/>
+                        <TextCell Text="Discord Tag"/>
+                        <TextCell Text="Steam Tag"/>
+                        <TextCell Text="Playstation Network Tag"/>
+                        <TextCell Text="Xbox-Live Tag"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
