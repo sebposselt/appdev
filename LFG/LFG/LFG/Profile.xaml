@@ -4,7 +4,7 @@
              x:Class="LFG.Profile">
     <ContentPage.Content>
         <StackLayout>
-            
+
             <Button
                 Text="Main Menu"
                 Clicked="Mainmenu_Clicked_Button"/>
@@ -14,6 +14,10 @@
                 Text="Match Making"
                 Clicked="Matchmaking_Clicked_Button"/>
             <Button/>
+
+            <Entry
+                x:Name="Username"
+                Placeholder="Username"/>
 
             <Picker x:Name="Region">
                 <Picker.ItemsSource>
@@ -68,23 +72,46 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <TableView>
-                <TableRoot>
-                    <TableSection>
-                        <TextCell Text="Username"/>
-                        <TextCell Text="Game 1"/>
-                        <TextCell Text="Game 2"/>
-                        <TextCell Text="Game 3"/>
-                        <TextCell Text="Game 4"/>
-                        <TextCell Text="Game 5"/>
-                        <TextCell Text="Game 1"/>
-                        <TextCell Text="Discord Tag"/>
-                        <TextCell Text="Steam Tag"/>
-                        <TextCell Text="Playstation Network Tag"/>
-                        <TextCell Text="Xbox-Live Tag"/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
+            <Entry
+                x:Name="Game1"
+                Placeholder="Game 1"/>
+
+            <Entry
+                x:Name="Game2"
+                Placeholder="Game 2"/>
+
+            <Entry
+                x:Name="Game3"
+                Placeholder="Game 3"/>
+
+            <Entry
+                x:Name="Game4"
+                Placeholder="Game 4"/>
+
+            <Entry
+                x:Name="Game5"
+                Placeholder="Game 5"/>
+            
+            <Entry
+                x:Name="DiscordTag"
+                Placeholder="Discord Tag"/>
+            
+            <Entry
+                x:Name="SteamTag"
+                Placeholder="Steam Tag"/>
+
+            <Entry
+                x:Name="PlaystationTag"
+                Placeholder="Playstation Network Tag"/>
+
+            <Entry
+                x:Name="XboxTag"
+                Placeholder="Xbox Live Tag"/>
+
+            <Button
+                Text="Save"
+                Clicked="Save_Button_Clicked"/>
+            <Button/>
 
 
         </StackLayout>
