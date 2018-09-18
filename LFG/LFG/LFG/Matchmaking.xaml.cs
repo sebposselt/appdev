@@ -22,7 +22,7 @@ namespace LFG
         }
 
         private async void Profile_Button_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Profile());
+            await Navigation.PushAsync(new ProfilePage());
         }
     }
 }

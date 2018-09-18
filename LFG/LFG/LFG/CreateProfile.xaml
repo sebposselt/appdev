@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="LFG.CreateProfile">
+    <ContentPage.Content>
+        <ScrollView>        
+            <StackLayout>
+                <Entry
+                    x:Name="Username"
+                    Placeholder="Username"/>
+
+                <Picker x:Name="Region" Title="Region">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>North America</x:String>
+                            <x:String>South America</x:String>
+                            <x:String>Europe</x:String>
+                            <x:String>Ociania</x:String>
+                            <x:String>Africa</x:String>
+                            <x:String>Asia</x:String>
+                            <x:String>Russia</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker x:Name="Language" Title="Language">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>English</x:String>
+                            <x:String>Italian</x:String>
+                            <x:String>French</x:String>
+                            <x:String>Chinese</x:String>
+                            <x:String>Japanese</x:String>
+                            <x:String>Korean</x:String>
+                            <x:String>Russian</x:String>
+                            <x:String>Portuguese</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker x:Name="Age" Title="Age">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Bellow 18</x:String>
+                            <x:String>18-25</x:String>
+                            <x:String>26-35</x:String>
+                            <x:String>36-45</x:String>
+                            <x:String>46-55</x:String>
+                            <x:String>56-65</x:String>
+                            <x:String>65+</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker x:Name="Platform" Title="Platform">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Xbox</x:String>
+                            <x:String>Playstation</x:String>
+                            <x:String>PC</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Entry
+                    x:Name="Game1"
+                    Placeholder="Game 1"/>
+
+                <Entry
+                    x:Name="Game2"
+                    Placeholder="Game 2"/>
+
+                <Entry
+                    x:Name="Game3"
+                    Placeholder="Game 3"/>
+
+                <Entry
+                    x:Name="Game4"
+                    Placeholder="Game 4"/>
+
+                <Entry
+                    x:Name="Game5"
+                    Placeholder="Game 5"/>
+                
+                <Entry
+                    x:Name="DiscordTag"
+                    Placeholder="Discord Tag"/>
+                
+                <Entry
+                    x:Name="SteamTag"
+                    Placeholder="Steam Tag"/>
+
+                <Entry
+                    x:Name="PlaystationTag"
+                    Placeholder="Playstation Network Tag"/>
+
+                <Entry
+                    x:Name="XboxTag"
+                    Placeholder="Xbox Live Tag"/>
+
+                <Button
+                    Text="Save"
+                    Clicked="Save_Button_Clicked"/>
+                <Button/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

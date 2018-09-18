@@ -11,12 +11,15 @@ namespace LFG
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new CreateProfile());
 		}
 
 		protected override void OnStart ()
 		{
 			// Handle when your app starts
+            //TODO init new profile.
+
+
 		}
 
 		protected override void OnSleep ()
