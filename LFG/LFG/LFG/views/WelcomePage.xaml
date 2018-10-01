@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    NavigationPage.HasNavigationBar="false"
+    BackgroundColor="Black"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.WelcomePage">
+    
+    
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" TextColor="Blue" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Button Text="Create Profile"  TextColor="Blue" BorderWidth="2" BorderColor="Blue" Clicked="Handle_Clicked"/>        
+    </StackLayout>
+</ContentPage>
