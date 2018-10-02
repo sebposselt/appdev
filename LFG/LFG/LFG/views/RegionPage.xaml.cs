@@ -20,7 +20,6 @@ namespace LFG.views
                 "Asia"
             };
         }
-
         public ListView RegionList { get { return regionList; } }
     }
 }

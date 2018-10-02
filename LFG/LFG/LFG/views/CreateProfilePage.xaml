@@ -5,22 +5,40 @@
             <TableRoot>
                 <TableSection>
                     <EntryCell Label="Username" Placeholder="(e.g. Slayer666)" Keyboard="Text" />
-                    <ViewCell Tapped="Handle_Tapped">
+                    <ViewCell Tapped="Region_Tapped">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Region" VerticalOptions="Center" />
                             <Label x:Name="region" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
                         </StackLayout>
                     </ViewCell>
                     
+                    <ViewCell Tapped="Language_Tapped">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Language" VerticalOptions="Center" />
+                            <Label x:Name="language" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
                     
-                    
-                    
-                    
+                    <ViewCell Tapped="Age_Tapped">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Age" VerticalOptions="Center" />
+                            <Label x:Name="age" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
                     
                 </TableSection>
                 <TableSection Title="Game1">
-                    <EntryCell Label="Game title" Placeholder="(e.g. Slayer666)" Keyboard="Text" />
+                    <EntryCell Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" />
+                    <ViewCell Tapped="Platform_Tapped">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Platform" VerticalOptions="Center" />
+                            <Label x:Name="platform1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                    
                 </TableSection>
+                
+                
                 <TableSection Title="Game2">
                 </TableSection>
             </TableRoot>
