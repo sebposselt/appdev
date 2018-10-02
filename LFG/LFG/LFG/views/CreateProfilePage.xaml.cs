@@ -61,6 +61,18 @@ namespace LFG.views
             };
             Navigation.PushAsync(page);
         }
+
+        void Skill_Tapped(object sender, System.EventArgs e)
+        {
+            var page = new SkillPage();
+            //string selectedRegion = page.RegionList.SelectedItem.ToString();
+            page.SkillList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
+            {
+                skill1.Text = args.SelectedItem.ToString();
+                Navigation.PopAsync();
+            };
+            Navigation.PushAsync(page);
+        }
     }
 }
 

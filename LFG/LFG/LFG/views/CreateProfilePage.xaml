@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage BackgroundColor="Black" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.CreateProfilePage">
     <ScrollView>
-        <TableView>
+        <TableView Intent="Form">
             <TableRoot>
                 <TableSection>
-                    <EntryCell Label="Username" Placeholder="(e.g. Slayer666)" Keyboard="Text" />
+                    <EntryCell Label="Username" Placeholder="(e.g. Slayer666)" Keyboard="Text" HorizontalTextAlignment="End" />
                     <ViewCell Tapped="Region_Tapped">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Region" VerticalOptions="Center" />
@@ -25,21 +25,53 @@
                             <Label x:Name="age" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
                         </StackLayout>
                     </ViewCell>
-                    
                 </TableSection>
-                <TableSection Title="Game1">
-                    <EntryCell Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" />
+                
+                <!--TODO Make this Table section variable height and set a max character on the entry field!!-->
+                <TableSection Title="Profile text">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Editor Text="e.g. Hi my name Phillip J. Fry!" Keyboard="Chat" IsSpellCheckEnabled="true" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+
+                
+                <TableSection Title="Game #1">
+                    <EntryCell  Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    
                     <ViewCell Tapped="Platform_Tapped">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
                             <Label x:Name="platform1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
                         </StackLayout>
                     </ViewCell>
-                    
+
+                    <ViewCell Tapped="Skill_Tapped">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Skill Level" VerticalOptions="Center" />
+                            <Label x:Name="skill1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>  
                 </TableSection>
                 
                 
-                <TableSection Title="Game2">
+                <TableSection Title="Game #2">
+                    <EntryCell HorizontalTextAlignment="End" Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" />
+<!--                    
+                    <ViewCell Tapped="Platform_Tapped">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Platform" VerticalOptions="Center" />
+                            <Label x:Name="platform2" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell Tapped="Skill_Tapped">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Skill Level" VerticalOptions="Center" />
+                            <Label x:Name="skill2" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>  -->
                 </TableSection>
             </TableRoot>
         </TableView>
