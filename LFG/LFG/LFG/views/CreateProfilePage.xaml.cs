@@ -1,24 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using LFG.viewmodels;
 using Xamarin.Forms;
 
 namespace LFG.views
 {
     public partial class CreateProfilePage : ContentPage
     {
+        private CreateProfilePageViewModel _createProfilePageViewModel;
+
         public CreateProfilePage()
         {
+            _createProfilePageViewModel = new CreateProfilePageViewModel();
             InitializeComponent();
         }
 
         void Region_Tapped(object sender, System.EventArgs e)
         {
             var page = new RegionPage();
-            //string selectedRegion = page.RegionList.SelectedItem.ToString();
             page.RegionList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 region.Text = args.SelectedItem.ToString();
+                // is this okay according to MVVM?? I don't know
+                _createProfilePageViewModel.PlayerProfile.Region = args.SelectedItem.ToString();
                 Navigation.PopAsync();
             };
             Navigation.PushAsync(page);
@@ -27,10 +31,10 @@ namespace LFG.views
         void Language_Tapped(object sender, System.EventArgs e)
         {
             var page = new LanguagePage();
-            //string selectedRegion = page.RegionList.SelectedItem.ToString();
             page.LanguageList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 language.Text = args.SelectedItem.ToString();
+                _createProfilePageViewModel.PlayerProfile.Language = args.SelectedItem.ToString();
                 Navigation.PopAsync();
             };
             Navigation.PushAsync(page);
@@ -39,10 +43,10 @@ namespace LFG.views
         void Age_Tapped(object sender, System.EventArgs e)
         {
             var page = new AgePage();
-            //string selectedRegion = page.RegionList.SelectedItem.ToString();
             page.AgeList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 age.Text = args.SelectedItem.ToString();
+                _createProfilePageViewModel.PlayerProfile.Age = args.SelectedItem.ToString();
                 Navigation.PopAsync();
             };
             Navigation.PushAsync(page);
@@ -53,10 +57,10 @@ namespace LFG.views
         void Platform_Tapped(object sender, System.EventArgs e)
         {
             var page = new PlatformPage();
-            //string selectedRegion = page.RegionList.SelectedItem.ToString();
             page.PlatformList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 platform1.Text = args.SelectedItem.ToString();
+                _createProfilePageViewModel.PlayerProfile.Game1.Platform = args.SelectedItem.ToString();
                 Navigation.PopAsync();
             };
             Navigation.PushAsync(page);
@@ -65,10 +69,10 @@ namespace LFG.views
         void Skill_Tapped(object sender, System.EventArgs e)
         {
             var page = new SkillPage();
-            //string selectedRegion = page.RegionList.SelectedItem.ToString();
             page.SkillList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 skill1.Text = args.SelectedItem.ToString();
+                _createProfilePageViewModel.PlayerProfile.Game1.SkillLevel = args.SelectedItem.ToString();
                 Navigation.PopAsync();
             };
             Navigation.PushAsync(page);

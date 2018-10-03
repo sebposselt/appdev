@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.CreateProfilePage">
+<ContentPage 
+    xmlns:local="clr-namespace:LFG.viewmodels"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="LFG.views.CreateProfilePage">
     <ScrollView>
         <TableView Intent="Form">
             <TableRoot>
@@ -30,8 +34,8 @@
                 <!--TODO Make this Table section variable height and set a max character on the entry field!!-->
                 <TableSection Title="Profile text">
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="13, 5">
-                            <Editor Text="e.g. Hi my name Phillip J. Fry!" Keyboard="Chat" IsSpellCheckEnabled="true" />
+                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="13, 5">
+                            <Editor AutoSize="TextChanges"   Text="e.g. Hi my name Phillip J. Fry!" VerticalOptions="FillAndExpand" MaxLength="240" Keyboard="Chat" IsSpellCheckEnabled="true" />
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
@@ -47,7 +51,7 @@
                         </StackLayout>
                     </ViewCell>
 
-                    <ViewCell Tapped="Skill_Tapped">
+                    <ViewCell Tapped="Skill_Tapped" x:Name="skill1viewcell">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Skill Level" VerticalOptions="Center" />
                             <Label x:Name="skill1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
@@ -73,7 +77,18 @@
                         </StackLayout>
                     </ViewCell>  -->
                 </TableSection>
+                
+                <!--TODO this is not a pretty way to do this..-->
+                <TableSection>
+                    <ViewCell>
+                        <ViewCell.BindingContext>
+                            <local:CreateProfilePageViewModel/>
+                        </ViewCell.BindingContext>
+                        <Button Text="Save Profile" HorizontalOptions="Center" Command="{Binding SaveCommand}"/>
+                    </ViewCell>    
+                </TableSection>
             </TableRoot>
         </TableView>
+        
     </ScrollView>
 </ContentPage>
