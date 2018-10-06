@@ -17,4 +17,9 @@
     <Folder Include="models\" />
     <Folder Include="viewmodels\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="views\DisplayProfilePage.xaml.cs">
+      <DependentUpon>DisplayProfilePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

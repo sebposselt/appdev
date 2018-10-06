@@ -10,8 +10,8 @@ namespace LFG
     public partial class App : Application
     {
 
-
         private Profile _user;
+
 
         public App()
         {
@@ -20,6 +20,11 @@ namespace LFG
             dummyprofile();
 			MainPage = new NavigationPage(new WelcomePage());
         }
+
+
+        public Profile User { get { return _user; } }
+
+
 
         protected override void OnStart()
         {
