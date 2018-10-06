@@ -520,7 +520,7 @@
       ]
     },
     "Xamarin.Android.Support.v4/27.0.2.1": {
-      "sha512": "/tq1agjFA4D2NSSI6qDxSEhXaKq3YUn2tJhhURZneMMCUnFEiE0hafJRRqiYPB55AyBKStu9i+wa5P8GYqAhnw==",
+      "sha512": "cK4ixeeIPSF1xl371Rb2CiEMrSCXa5kXaehsSkeAFGtgpAQvbt6FbEKk501fzVi/HzNkETzajEtsQ9PMttZi9A==",
       "type": "package",
       "path": "xamarin.android.support.v4/27.0.2.1",
       "files": [
@@ -613,7 +613,7 @@
       ]
     },
     "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "YlFOM9u8onIRxJwYJ3l+O0wFKqzzrDjDrgnoBr1rct+eaQKU77vFydxvTP+WxYlYzR14hYvyLNC65L84+6ke6w==",
+      "sha512": "oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
@@ -645,13 +645,11 @@
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
-        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
@@ -781,31 +779,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/datamat/.nuget/packages/": {}
+    "C:\\Users\\Melvyn Chew\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.Android/LFG.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG.Android\\LFG.Android.csproj",
       "projectName": "LFG.Android",
-      "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.Android/LFG.Android.csproj",
-      "packagesPath": "/Users/datamat/.nuget/packages/",
-      "outputPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.Android/obj",
+      "projectPath": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG.Android\\LFG.Android.csproj",
+      "packagesPath": "C:\\Users\\Melvyn Chew\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG.Android\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/datamat/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Melvyn Chew\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid81"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj": {
-              "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj"
+            "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG\\LFG.csproj": {
+              "projectPath": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG\\LFG.csproj"
             }
           }
         }
@@ -814,29 +815,29 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "3.1.0.697729"
-          },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
-            "version": "27.0.2.1"
-          },
-          "Xamarin.Android.Support.v7.AppCompat": {
-            "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v4": {
             "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
+          },
+          "Xamarin.Android.Support.v7.AppCompat": {
+            "target": "Package",
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v7.CardView": {
             "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v7.MediaRouter": {
             "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[3.1.0.697729, )"
           }
         }
       }

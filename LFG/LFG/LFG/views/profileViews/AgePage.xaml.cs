@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace LFG.views
+namespace LFG.views/profileViews
 {
     public partial class AgePage : ContentPage
     {
@@ -12,7 +12,7 @@ namespace LFG.views
             InitializeComponent();
             ageList.ItemsSource = new List<string>
             {
-                "Bellow 18",
+                "Below 18",
                 "18-25",
                 "26-35",
                 "36-45",
