@@ -91,7 +91,7 @@
                         <ViewCell.BindingContext>
                             <local:CreateProfilePageViewModel/>
                         </ViewCell.BindingContext>
-                        <Button Text="Save Profile" HorizontalOptions="Center" Command="{Binding SaveCommand}"/>
+                        <Button Text="Save Profile" HorizontalOptions="Center" Command="{Binding savingCommand}"/>
                     </ViewCell>    
                 </TableSection>
             </TableRoot>

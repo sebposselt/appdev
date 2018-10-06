@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "PCLStorage/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        }
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "compile": {
@@ -138,6 +149,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PCLStorage": "1.0.2",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -149,6 +161,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "PCLStorage/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        }
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "compile": {
@@ -285,6 +308,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PCLStorage": "1.0.2",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -296,6 +320,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "PCLStorage/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        }
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "compile": {
@@ -432,6 +467,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PCLStorage": "1.0.2",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -443,6 +479,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "PCLStorage/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+        }
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "compile": {
@@ -579,6 +626,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PCLStorage": "1.0.2",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -591,6 +639,51 @@
     }
   },
   "libraries": {
+    "PCLStorage/1.0.2": {
+      "sha512": "9If+1ZFCk3QaT/asfiL+J9FMnx2CTMrLCU8tDMUOI/aCGWGWl9vJ1/KcMkjf92op23ZknenvYJZBLDAqE3sFlg==",
+      "type": "package",
+      "path": "pclstorage/1.0.2",
+      "files": [
+        "lib/monoandroid/PCLStorage.Abstractions.dll",
+        "lib/monoandroid/PCLStorage.Abstractions.xml",
+        "lib/monoandroid/PCLStorage.dll",
+        "lib/monoandroid/PCLStorage.xml",
+        "lib/monotouch/PCLStorage.Abstractions.dll",
+        "lib/monotouch/PCLStorage.Abstractions.xml",
+        "lib/monotouch/PCLStorage.dll",
+        "lib/monotouch/PCLStorage.xml",
+        "lib/net45/PCLStorage.Abstractions.dll",
+        "lib/net45/PCLStorage.Abstractions.xml",
+        "lib/net45/PCLStorage.dll",
+        "lib/net45/PCLStorage.xml",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.xml",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.xml",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.xml",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.dll",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.xml",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.dll",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.xml",
+        "lib/portable-win8+wpa81/PCLStorage.Abstractions.dll",
+        "lib/portable-win8+wpa81/PCLStorage.Abstractions.xml",
+        "lib/portable-win8+wpa81/PCLStorage.dll",
+        "lib/portable-win8+wpa81/PCLStorage.xml",
+        "lib/sl5/PCLStorage.Abstractions.dll",
+        "lib/sl5/PCLStorage.Abstractions.xml",
+        "lib/sl5/PCLStorage.dll",
+        "lib/sl5/PCLStorage.xml",
+        "lib/wp8/PCLStorage.Abstractions.dll",
+        "lib/wp8/PCLStorage.Abstractions.xml",
+        "lib/wp8/PCLStorage.dll",
+        "lib/wp8/PCLStorage.xml",
+        "pclstorage.1.0.2.nupkg.sha512",
+        "pclstorage.nuspec"
+      ]
+    },
     "Xamarin.Forms/3.1.0.697729": {
       "sha512": "YlFOM9u8onIRxJwYJ3l+O0wFKqzzrDjDrgnoBr1rct+eaQKU77vFydxvTP+WxYlYzR14hYvyLNC65L84+6ke6w==",
       "type": "package",
@@ -766,31 +859,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/datamat/.nuget/packages/": {}
+    "C:\\Users\\dougl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
       "projectName": "LFG.iOS",
-      "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
-      "packagesPath": "/Users/datamat/.nuget/packages/",
-      "outputPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/obj",
+      "projectPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
+      "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.iOS\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/datamat/.config/NuGet/NuGet.Config"
+        "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj": {
-              "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj"
+            "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG\\LFG.csproj": {
+              "projectPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG\\LFG.csproj"
             }
           }
         }
@@ -801,11 +897,11 @@
         "dependencies": {
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "3.1.0.697729"
+            "version": "[3.1.0.697729, )"
           },
           "Xamarin.TestCloud.Agent": {
             "target": "Package",
-            "version": "0.21.4"
+            "version": "[0.21.4, )"
           }
         }
       }
