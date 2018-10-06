@@ -13,6 +13,7 @@ namespace LFG.viewmodels
 
         public CreateProfilePageViewModel()
         {
+            PlayerProfile = new Profile();
             SaveCommand = new Command(Save);
         }
 

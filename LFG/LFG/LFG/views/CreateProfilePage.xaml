@@ -40,6 +40,13 @@
                     </ViewCell>
                 </TableSection>
 
+                <TableSection Title="Game Tags">
+                    <EntryCell Label="Discord Tag" Placeholder="(e.g) CSGOSlayer42#5556" Keyboard="Chat"/>
+                    <EntryCell Label="Steam Tag" Placeholder="&lt;name&gt;" Keyboard="Chat"/>
+                    <EntryCell Label="PSN Tag" Placeholder="&lt;name&gt;" Keyboard="Chat"/>    
+                    <EntryCell Label="Xbox Tag" Placeholder="&lt;name&gt;" Keyboard="Chat"/>
+                </TableSection>                
+                
                 
                 <TableSection Title="Game #1">
                     <EntryCell  Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
