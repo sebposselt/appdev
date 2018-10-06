@@ -17,7 +17,7 @@ namespace LFG.views
 
         void Region_Tapped(object sender, System.EventArgs e)
         {
-            var page = new RegionPage();
+            var page = new profileViews.RegionPage();
             page.RegionList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 region.Text = args.SelectedItem.ToString();
@@ -30,7 +30,7 @@ namespace LFG.views
 
         void Language_Tapped(object sender, System.EventArgs e)
         {
-            var page = new LanguagePage();
+            var page = new profileViews.LanguagePage();
             page.LanguageList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 language.Text = args.SelectedItem.ToString();
@@ -42,7 +42,7 @@ namespace LFG.views
 
         void Age_Tapped(object sender, System.EventArgs e)
         {
-            var page = new AgePage();
+            var page = new profileViews.AgePage();
             page.AgeList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 age.Text = args.SelectedItem.ToString();
@@ -56,7 +56,7 @@ namespace LFG.views
         //maybe issue with the platform1 tag. I want to reuse this eventhandler, so i need to ensure it can write to different labels in the xaml
         void Platform_Tapped(object sender, System.EventArgs e)
         {
-            var page = new PlatformPage();
+            var page = new profileViews.PlatformPage();
             page.PlatformList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 platform1.Text = args.SelectedItem.ToString();
@@ -68,7 +68,7 @@ namespace LFG.views
 
         void Skill_Tapped(object sender, System.EventArgs e)
         {
-            var page = new SkillPage();
+            var page = new profileViews.SkillPage();
             page.SkillList.ItemSelected += (object src, SelectedItemChangedEventArgs args) =>
             {
                 skill1.Text = args.SelectedItem.ToString();

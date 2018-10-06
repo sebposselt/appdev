@@ -764,34 +764,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Melvyn Chew\\.nuget\\packages\\": {}
+    "/Users/FlyingPiano/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
+      "projectUniqueName": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
       "projectName": "LFG.iOS",
-      "projectPath": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
-      "packagesPath": "C:\\Users\\Melvyn Chew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG.iOS\\obj\\",
+      "projectPath": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
+      "packagesPath": "/Users/FlyingPiano/.nuget/packages/",
+      "outputPath": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG.iOS/obj",
       "projectStyle": "PackageReference",
-      "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Melvyn Chew\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/FlyingPiano/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG\\LFG.csproj": {
-              "projectPath": "C:\\Users\\Melvyn Chew\\Desktop\\School\\Semester_2_2018\\IAB330\\appdev\\LFG\\LFG\\LFG\\LFG.csproj"
+            "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG/LFG.csproj": {
+              "projectPath": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG/LFG.csproj"
             }
           }
         }
@@ -802,11 +799,11 @@
         "dependencies": {
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "3.1.0.697729"
           },
           "Xamarin.TestCloud.Agent": {
             "target": "Package",
-            "version": "[0.21.4, )"
+            "version": "0.21.4"
           }
         }
       }

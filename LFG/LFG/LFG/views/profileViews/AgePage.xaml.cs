@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace LFG.views/profileViews
+namespace LFG.views.profileViews
 {
     public partial class AgePage : ContentPage
     {
