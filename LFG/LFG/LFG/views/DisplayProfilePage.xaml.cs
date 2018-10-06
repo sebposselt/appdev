@@ -10,6 +10,8 @@ namespace LFG.views
         public DisplayProfilePage()
         {
             InitializeComponent();
+
+            //NavigationPage.HasNavigationBar = "false"
         }
     }
 }
