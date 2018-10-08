@@ -18,11 +18,13 @@ namespace LFG.views
             _user = new Profile();
             dummyprofile();
             _displayProfilePageViewModel = new DisplayProfilePageViewModel(_user);
-            BindingContext = _displayProfilePageViewModel;
+            //BindingContext = _displayProfilePageViewModel;
             InitializeComponent();
             //NavigationPage.HasNavigationBar = "false"
 
         }
+
+
 
         private void dummyprofile()
         {

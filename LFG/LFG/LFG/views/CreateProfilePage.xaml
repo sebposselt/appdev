@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="LFG.views.CreateProfilePage">
     <ScrollView>
-        <TableView Intent="Form">
+        <TableView Intent="Form" HasUnevenRows="true"  HeightRequest="50">
             <TableRoot>
                 <TableSection>
                     <EntryCell Label="Username" Placeholder="(e.g. Slayer666)" Keyboard="Text" HorizontalTextAlignment="End" />
@@ -30,14 +30,15 @@
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
-                
-                <!--TODO Make this Table section variable height and set a max character on the entry field!!-->
+            </TableRoot>
+            
+                <!--TODO Make this Table section variable height-->
                 <TableSection Title="Profile text">
-                    <ViewCell>
-                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="13, 5">
-                            <Editor AutoSize="TextChanges"   Text="e.g. Hi my name Phillip J. Fry!" VerticalOptions="FillAndExpand" MaxLength="240" Keyboard="Chat" IsSpellCheckEnabled="true" />
+                   <ViewCell>
+                        <StackLayout Padding="13, 5">
+                            <Editor AutoSize="TextChanges" Text="e.g. Hi my name Phillip J. Fry!" MaxLength="240" Keyboard="Chat" IsSpellCheckEnabled="true" />
                         </StackLayout>
-                    </ViewCell>
+                    </ViewCell>               
                 </TableSection>
 
                 <TableSection Title="Game Tags">
@@ -94,7 +95,6 @@
                         <Button Text="Save Profile" HorizontalOptions="Center" Command="{Binding SaveCommand}"/>
                     </ViewCell>    
                 </TableSection>
-            </TableRoot>
         </TableView>
         
     </ScrollView>

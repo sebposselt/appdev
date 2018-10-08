@@ -4,19 +4,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="LFG.views.DisplayProfilePage" 
     xmlns:local="clr-namespace:LFG.viewmodels"
-    BackgroundColor="Navy" >
+    BackgroundColor="Navy"
+    BindingContext="{Binding Source=local:DisplayProfilePageViewModel Path=Details}" >
     <ContentPage.Content>
         <ScrollView>
             <RelativeLayout>
-<!--                        TODO, binding not working... can't fingre out why..
-                <Label x:Name="usernameL" Text="{Binding PlayerProfile}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
-                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
-                        BackgroundColor="Silver" HeightRequest="100" 
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />-->
-                <Label x:Name="usernameL" Text="Username" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
+<!--                        TODO, binding not working... can't fingre out why.. --> 
+                <Label x:Name="usernameL" Text="{Binding PlayerProfile.Username}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
                         VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
                         BackgroundColor="Silver" HeightRequest="100" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+<!--                <Label x:Name="usernameL" Text="Username" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
+                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                        BackgroundColor="Silver" HeightRequest="100" 
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" /> -->
                 <Label x:Name="beginInfoL" Text="User Info" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=usernameL,Property=Height,Factor=1,Constant=10}"

@@ -13,9 +13,11 @@ namespace LFG.viewmodels
             PlayerProfile = profile;
         }
 
-
-
-
+        public string Uname
+        {
+            get
+            { return PlayerProfile.Username; }
+        }
 
     }
 }
