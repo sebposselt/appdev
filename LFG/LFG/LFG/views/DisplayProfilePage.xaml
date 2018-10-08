@@ -5,12 +5,12 @@
     x:Class="LFG.views.DisplayProfilePage" 
     xmlns:local="clr-namespace:LFG.viewmodels"
     BackgroundColor="Navy"
-    BindingContext="{Binding Source=local:DisplayProfilePageViewModel Path=Details}" >
+    BindingContext="local:DisplayProfilePageViewModel">
     <ContentPage.Content>
         <ScrollView>
             <RelativeLayout>
 <!--                        TODO, binding not working... can't fingre out why.. --> 
-                <Label x:Name="usernameL" Text="{Binding PlayerProfile.Username}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
+                <Label x:Name="usernameL" Text="{Binding Uname}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
                         VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
                         BackgroundColor="Silver" HeightRequest="100" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
