@@ -16,6 +16,10 @@
     <Folder Include="views\" />
     <Folder Include="models\" />
     <Folder Include="viewmodels\" />
+    <Folder Include="views\profileViews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="views\profileViews\LanguagePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="views\DisplayProfilePage.xaml.cs">
