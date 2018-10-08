@@ -8,7 +8,7 @@
     BindingContext="local:DisplayProfilePageViewModel">
     <ContentPage.Content>
         <ScrollView>
-            <RelativeLayout>
+            <RelativeLayout x:Name="info">
 <!--                        TODO, binding not working... can't fingre out why.. --> 
                 <Label x:Name="usernameL" Text="{Binding Uname}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
                         VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
@@ -18,10 +18,11 @@
                         VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
                         BackgroundColor="Silver" HeightRequest="100" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" /> -->
+                
+                
                 <Label x:Name="beginInfoL" Text="User Info" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=usernameL,Property=Height,Factor=1,Constant=10}"
-                    RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=0}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Constant=15}"/>
@@ -72,13 +73,47 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25,Constant=0}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=35}" />
-                <Editor AutoSize="TextChanges" Text="PlaceHolder very much text to come" MaxLength="240"  TextColor="White" BackgroundColor="Maroon" 
+                <Editor  x:Name="profileText" AutoSize="TextChanges" Text="PlaceHolder very much text to come" MaxLength="240"  TextColor="White" BackgroundColor="Maroon" 
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=profileTextL,Property=Y,Factor=1,Constant=40}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=-20}" />
                 
-            </RelativeLayout>            
+                
+                <!--Game 1-->
+                <!--Need help for make this ajust to a dynamic cell height-->
+                <Label x:Name="game1L" Text="Game #1" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=profileText,Property=Y,Factor=1, Constant=100}" 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
+                
+                <Label x:Name="game1TitleL" Text="Placeholder" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=game1L,Property=Y,Factor=1, Constant=25}"
+                    RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=0.4,Constant=-10}"/>
+                
+                <Label x:Name="game1SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="Skill Level: some level" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=game1L,Property=Y,Factor=1, Constant=25}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}" />
+
+               
+                <Label x:Name="game1PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Platfrom: PC " TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=game1L,Property=Y,Factor=1, Constant=55}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}"/>
+                    
+                
+            </RelativeLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
