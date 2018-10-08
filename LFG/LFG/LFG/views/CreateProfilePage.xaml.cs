@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using LFG.viewmodels;
+using LFG.views.profileViews;
 using Xamarin.Forms;
 
 namespace LFG.views
