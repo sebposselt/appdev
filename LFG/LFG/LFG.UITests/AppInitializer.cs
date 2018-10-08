@@ -10,7 +10,7 @@ namespace LFG.UITests
         {
             if (platform == Platform.Android)
             {
-                return ConfigureApp.Android.StartApp();
+                return ConfigureApp.Android.InstalledApp("LFG").StartApp();
             }
 
             return ConfigureApp.iOS.StartApp();
