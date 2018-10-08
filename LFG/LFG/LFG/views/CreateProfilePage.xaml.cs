@@ -78,6 +78,12 @@ namespace LFG.views
             };
             Navigation.PushAsync(page);
         }
+
+        void SavedProfile_Clicked(object sender, System.EventArgs e)
+        {
+            var profile = _createProfilePageViewModel.PlayerProfile;
+            Navigation.PushAsync(new DisplayProfilePage(profile));
+        }
     }
 }
 

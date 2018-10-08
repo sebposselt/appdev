@@ -92,7 +92,7 @@
                         <ViewCell.BindingContext>
                             <local:CreateProfilePageViewModel/>
                         </ViewCell.BindingContext>
-                        <Button Text="Save Profile" HorizontalOptions="Center" Command="{Binding SaveCommand}"/>
+                        <Button Text="Save Profile" HorizontalOptions="Center" Clicked="SavedProfile_Clicked" Command="{Binding SaveCommand}"/>
                     </ViewCell>    
                 </TableSection>
         </TableView>

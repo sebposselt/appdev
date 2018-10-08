@@ -14,9 +14,8 @@ namespace LFG.views
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
+            Navigation.PushAsync(new CreateProfilePage());
 
-            //Navigation.PushAsync(new CreateProfilePage());
-            Navigation.PushAsync(new DisplayProfilePage());
         }
     }
 

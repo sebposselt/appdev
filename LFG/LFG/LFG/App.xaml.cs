@@ -18,7 +18,6 @@ namespace LFG
             InitializeComponent();
             _user = new Profile();
             dummyprofile();
-			MainPage = new NavigationPage(new WelcomePage());
         }
 
 
@@ -28,7 +27,12 @@ namespace LFG
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+
+            //first time opening the app
+            MainPage = new NavigationPage(new WelcomePage());
+
+            //profile already exists
+            //MainPage = new NavigationPage(new DisplayProfilePage(_user));
         }
 
         protected override void OnSleep()
