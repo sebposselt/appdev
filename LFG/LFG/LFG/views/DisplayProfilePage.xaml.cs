@@ -10,9 +10,11 @@ namespace LFG.views
     {
         private DisplayProfilePageViewModel _displayProfilePageViewModel;
 
-        public DisplayProfilePage(Profile profile)
+        public DisplayProfilePage()
         {
-            _displayProfilePageViewModel = new DisplayProfilePageViewModel(profile);
+            var app = Application.Current as App;
+            Profile user = app.User;
+            _displayProfilePageViewModel = new DisplayProfilePageViewModel(user);
             InitializeComponent();
             //NavigationPage.HasNavigationBar = "false"
 

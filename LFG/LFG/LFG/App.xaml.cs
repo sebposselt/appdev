@@ -19,9 +19,17 @@ namespace LFG
             _user = new Profile();
             dummyprofile();
         }
-
-
-        public Profile User { get { return _user; } }
+           
+        public Profile User 
+        { 
+            get 
+            { 
+                return _user; 
+            } 
+            set {
+                _user = value;
+            }
+        }
 
 
 
@@ -29,10 +37,10 @@ namespace LFG
         {
 
             //first time opening the app
-            MainPage = new NavigationPage(new WelcomePage());
+            //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
-            //MainPage = new NavigationPage(new DisplayProfilePage(_user));
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnSleep()

@@ -82,7 +82,9 @@ namespace LFG.views
         void SavedProfile_Clicked(object sender, System.EventArgs e)
         {
             var profile = _createProfilePageViewModel.PlayerProfile;
-            Navigation.PushAsync(new DisplayProfilePage(profile));
+            var app = Application.Current as App;
+            app.User = profile;
+            Navigation.PushAsync(new DisplayProfilePage());
         }
     }
 }
