@@ -4,13 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="LFG.views.DisplayProfilePage" 
     xmlns:local="clr-namespace:LFG.viewmodels"
-    BackgroundColor="Navy"
-    BindingContext="local:DisplayProfilePageViewModel">
+    BackgroundColor="Navy">
     <ContentPage.Content>
         <ScrollView>
             <RelativeLayout>
 <!--                        TODO, binding not working... can't fingre out why.. --> 
-                <Label x:Name="usernameL" Text="{Binding Uname}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
+                <Label x:Name="usernameL" Text="{Binding PlayerProfile.Username}" FontAttributes="Bold" FontSize="Large" TextColor="Teal"  
                         VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
                         BackgroundColor="Silver" HeightRequest="100" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
@@ -33,7 +32,7 @@
                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=10}"
                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-10}"
                        />
-                    <Label  Text="&lt;myPSNtag&gt;" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
+                    <Label  Text="{Binding PlayerProfile.PSNTag}" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=tagsL,Property=Y,Factor=1,Constant=25}"
                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
@@ -44,7 +43,7 @@
                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=10}"
                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-10}"
                        />
-                    <Label Text="&lt;myXBOXtag&gt;" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
+                    <Label Text="{Binding PlayerProfile.XboxLiveTag}" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=xboxtagL,Property=Y,Factor=1,Constant=0}"
                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
@@ -56,7 +55,7 @@
                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=10}"
                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-10}"
                        />
-                    <Label Text="&lt;myDISCORDtag&gt;" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
+                    <Label Text="{Binding PlayerProfile.DiscordTag}" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=discordtagL,Property=Y,Factor=1,Constant=0}"
                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
@@ -68,7 +67,7 @@
                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=10}"
                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-10}"
                        />
-                    <Label Text="&lt;mySTEAMtag&gt;" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
+                    <Label Text="{Binding PlayerProfile.SteamTag}" TextColor="Fuchsia" HeightRequest="20" HorizontalTextAlignment="Center"
                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=steamtagL,Property=Y,Factor=1,Constant=0}"
                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
@@ -89,7 +88,7 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25,Constant=0}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=35}" />
-                    <Entry Text="PlaceHolder" TextColor="White" BackgroundColor="Maroon" 
+                    <Entry Text="{Binding PlayerProfile.Age}" TextColor="White" BackgroundColor="Maroon" 
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=beginInfoL,Property=Y,Factor=1,Constant=20}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.70,Constant=-10}" 
@@ -101,7 +100,7 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25,Constant=0}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=35}" />
-                    <Entry Text="PlaceHolder" TextColor="White" BackgroundColor="Maroon" 
+                    <Entry Text="{Binding PlayerProfile.Region}" TextColor="White" BackgroundColor="Maroon" 
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=ageL,Property=Y,Factor=1,Constant=45}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}" 
@@ -115,7 +114,7 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25,Constant=0}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=35}" />
-                    <Entry Text="PlaceHolder" TextColor="White" BackgroundColor="Maroon" 
+                    <Entry Text="{Binding PlayerProfile.Language}" TextColor="White" BackgroundColor="Maroon" 
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=regionL,Property=Y,Factor=1,Constant=45}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}" 
@@ -128,7 +127,7 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25,Constant=0}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=35}" />
-                <Editor  x:Name="profileText" AutoSize="TextChanges" Text="PlaceHolder very much text to come" MaxLength="240"  TextColor="White" BackgroundColor="Maroon" 
+                <Editor  x:Name="profileText" AutoSize="TextChanges" Text="{Binding PlayerProfile.ProfileText}" MaxLength="240"  TextColor="White" BackgroundColor="Maroon" 
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=profileTextL,Property=Y,Factor=1,Constant=40}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
@@ -144,7 +143,7 @@
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
                 
-                <Label x:Name="game1TitleL" Text="Placeholder" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
+                <Label x:Name="game1TitleL" Text="{Binding PlayerProfile.Game1.Title}" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game1L,Property=Y,Factor=1, Constant=25}"
@@ -152,13 +151,13 @@
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.4,Constant=-10}"/>
                 
-                <Label x:Name="game1SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="Skill Level: some level" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game1SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="{Binding PlayerProfile.Game1.SkillLevel}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game1L,Property=Y,Factor=1, Constant=25}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}" />
-                <Label x:Name="game1PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Platfrom: PC " TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game1PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{Binding PlayerProfile.Game1.Platform}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game1L,Property=Y,Factor=1, Constant=55}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
@@ -174,7 +173,7 @@
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
                 
-                <Label x:Name="game2TitleL" Text="Placeholder" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
+                <Label x:Name="game2TitleL" Text="{Binding PlayerProfile.Game2.Title}" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game2L,Property=Y,Factor=1, Constant=25}"
@@ -182,13 +181,13 @@
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.4,Constant=-10}"/>
                 
-                <Label x:Name="game2SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="Skill Level: some level" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game2SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="{Binding PlayerProfile.Game2.SkillLevel}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game2L,Property=Y,Factor=1, Constant=25}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}" />
-                <Label x:Name="game2PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Platfrom: PC " TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game2PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{Binding PlayerProfile.Game2.Platform}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game2L,Property=Y,Factor=1, Constant=55}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
@@ -204,7 +203,7 @@
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
                 
-                <Label x:Name="game3TitleL" Text="Placeholder" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
+                <Label x:Name="game3TitleL" Text="{Binding PlayerProfile.Game3.Title}" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game3L,Property=Y,Factor=1, Constant=25}"
@@ -212,13 +211,13 @@
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.4,Constant=-10}"/>
                 
-                <Label x:Name="game3SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="Skill Level: some level" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game3SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="{Binding PlayerProfile.Game3.SkillLevel}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game3L,Property=Y,Factor=1, Constant=25}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}" />
-                <Label x:Name="game3PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Platfrom: PC " TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game3PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{Binding PlayerProfile.Game3.Platform}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game3L,Property=Y,Factor=1, Constant=55}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
@@ -234,7 +233,7 @@
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
                 
-                <Label x:Name="game4TitleL" Text="Placeholder" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
+                <Label x:Name="game4TitleL" Text="{Binding PlayerProfile.Game4.Title}" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game4L,Property=Y,Factor=1, Constant=25}"
@@ -242,13 +241,13 @@
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.4,Constant=-10}"/>
                 
-                <Label x:Name="game4SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="Skill Level: some level" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game4SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="{Binding PlayerProfile.Game4.SkillLevel}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game4L,Property=Y,Factor=1, Constant=25}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}" />
-                <Label x:Name="game4PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Platfrom: PC " TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game4PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{Binding PlayerProfile.Game4.Platform}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game4L,Property=Y,Factor=1, Constant=55}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
@@ -264,20 +263,20 @@
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
                 
-                <Label x:Name="game5TitleL" Text="Placeholder" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
+                <Label x:Name="game5TitleL" Text="{Binding PlayerProfile.Game5.Title}" TextColor="Fuchsia" BackgroundColor="Silver" FontSize="Medium" HeightRequest="60"
                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game5L,Property=Y,Factor=1, Constant=25}"
                     RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.4,Constant=-10}"/>
-                <Label x:Name="game5SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="Skill Level: some level" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game5SkillL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Text="{Binding PlayerProfile.Game5.SkillLevel}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game5L,Property=Y,Factor=1, Constant=25}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=0.6,Constant=-10}" />
-                <Label x:Name="game5PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Platfrom: PC " TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
+                <Label x:Name="game5PlatformL" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{Binding PlayerProfile.Game5.Platform}" TextColor="Black" FontSize="Small"  BackgroundColor="Silver" HeightRequest="30"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=game5L,Property=Y,Factor=1, Constant=55}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4, Constant=5}"

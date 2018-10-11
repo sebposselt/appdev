@@ -12,12 +12,12 @@ namespace LFG.views
 
         public DisplayProfilePage()
         {
+
             var app = Application.Current as App;
             Profile user = app.User;
             _displayProfilePageViewModel = new DisplayProfilePageViewModel(user);
+            BindingContext = _displayProfilePageViewModel;
             InitializeComponent();
-            //NavigationPage.HasNavigationBar = "false"
-
         }
 
 

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.MainPage" 
             xmlns:pages="clr-namespace:LFG.views">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Order="Primary" Icon="settingHiRes.png" Clicked="Handle_Clicked"/>
+    </TabbedPage.ToolbarItems>
     <pages:DisplayProfilePage Title="My profile" Icon="user.png"/>
     <pages:MatchMakingPage Title="LFG" Icon="match.png"/>
 </TabbedPage>

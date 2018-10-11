@@ -1,27 +1,35 @@
 ﻿using System;
+using LFG.viewmodels;
+
 namespace LFG.models
 {
     public class Profile
     {
-        public string Username;
-        public string Region;
-        public string Language;
-        public string Age;
-        public string ProfileText;
-        public string SteamTag;
-        public string XboxLiveTag;
-        public string DiscordTag;
-        public string PSNTag;
+        public string Username { get; set; }
+        public string Region { get; set; }
+        public string Language { get; set; }
+        public string Age { get; set; }
+        public string ProfileText { get; set; }
+        public string SteamTag { get; set; }
+        public string XboxLiveTag { get; set; }
+        public string DiscordTag { get; set; }
+        public string PSNTag { get; set; }
 
 
-        public Game Game1;
-        public Game Game2;
-        public Game Game3;
-        public Game Game4;
-        public Game Game5;
+        public Game Game1 { get; set; }
+        public Game Game2 { get; set; }
+        public Game Game3 { get; set; }
+        public Game Game4 { get; set; }
+        public Game Game5 { get; set; }
 
         public Profile()
         {
+            //default values
+            Region = "None";
+            Language = "None";
+            Age = "None";
+            ProfileText = "e.g. Hi my name Phillip J. Fry!";
+
             Game1 = new Game();
             Game2 = new Game();
             Game3 = new Game();

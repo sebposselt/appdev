@@ -15,11 +15,16 @@ namespace LFG
 
         public App()
         {
-            InitializeComponent();
             _user = new Profile();
             dummyprofile();
+            //first time opening the app
+            //MainPage = new NavigationPage(new WelcomePage());
+
+            //profile already exists
+            MainPage = new NavigationPage(new MainPage());
+            InitializeComponent();
         }
-           
+
         public Profile User 
         { 
             get 
@@ -40,7 +45,7 @@ namespace LFG
             //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
-            MainPage = new NavigationPage(new MainPage());
+
         }
 
         protected override void OnSleep()
