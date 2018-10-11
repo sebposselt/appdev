@@ -8,9 +8,11 @@ namespace LFG.views
     public partial class MainPage : TabbedPage
     {
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        async void Handle_Clicked(object sender, System.EventArgs e)
         {
-            Debug.WriteLine("clicked"); 
+            await Navigation.PushAsync(new CreateProfilePage());
+            Navigation.RemovePage(this);
+            Debug.WriteLine("Settings clicked!");
         }
 
         public MainPage()

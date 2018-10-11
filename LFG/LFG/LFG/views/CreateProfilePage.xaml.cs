@@ -14,9 +14,17 @@ namespace LFG.views
 
         public CreateProfilePage()
         {
-            _createProfilePageViewModel = new CreateProfilePageViewModel();
-            BindingContext = _createProfilePageViewModel;
             InitializeComponent();
+            BindingContext = _createProfilePageViewModel;
+
+            //TODO Sooooo when you want to edit old info, i.e. clicking settings from mainPage. 
+            //everyting loads as is should except the pickers.. skill1 on line 25 doesnt work untill du call InitilizeComponents.
+            //But line 18 wipes some of the data from _createProfilePageViewModel.PlayerProfile.. 
+            _createProfilePageViewModel = new CreateProfilePageViewModel();
+            if (_createProfilePageViewModel.PlayerProfile.Game1.Platform != null){
+                skill1.SelectedItem = _createProfilePageViewModel.PlayerProfile.Game1.Platform;
+            }
+
         }
 
 

@@ -62,7 +62,7 @@
                     <ViewCell x:Name="skill1viewcell">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game1.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
+                            <Picker x:Name="skill1" HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game1.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>  
                 </TableSection>
@@ -99,7 +99,7 @@
                     <ViewCell x:Name="skill3viewcell">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game3.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
+                            <Picker  HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game3.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>  
                 </TableSection>

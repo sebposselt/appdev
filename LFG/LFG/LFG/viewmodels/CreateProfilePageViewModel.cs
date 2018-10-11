@@ -32,7 +32,8 @@ namespace LFG.viewmodels
 
         public CreateProfilePageViewModel()
         {
-            PlayerProfile = new Profile();
+            var app = Application.Current as App;
+            PlayerProfile = app.User;
             SaveCommand = new Command(Save);
         }
 
