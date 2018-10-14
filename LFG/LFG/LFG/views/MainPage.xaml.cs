@@ -1,25 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using LFG.viewmodels;
 using Xamarin.Forms;
 
 namespace LFG.views
 {
     public partial class MainPage : TabbedPage
     {
-
-        async void Handle_Clicked(object sender, System.EventArgs e)
-        {
-            await Navigation.PushAsync(new CreateProfilePage());
-            Navigation.RemovePage(this);
-            Debug.WriteLine("Settings clicked!");
-        }
+        private MainPageViewModel _mainPageViewModel;
 
         public MainPage()
         {
             //NavigationPage.SetHasNavigationBar(this, false);
+            _mainPageViewModel = new MainPageViewModel();
+            BindingContext = _mainPageViewModel;
             InitializeComponent();
-
         }
     }
 }

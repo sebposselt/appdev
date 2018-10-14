@@ -141,11 +141,9 @@
                 </TableSection>            
             
                 
-                
-
                 <TableSection>
                     <ViewCell>
-                        <Button Text="Save Profile" HorizontalOptions="Center" Clicked="SavedProfile_Clicked" Command="{Binding SaveCommand}"/>
+                        <Button Text="Save Profile" HorizontalOptions="Center"  Command="{Binding SaveCommand}"/>
                     </ViewCell>    
                 </TableSection>
         </TableView>

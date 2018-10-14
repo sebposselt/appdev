@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using LFG.views;
 using LFG.models;
+using LFG.tools;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
@@ -16,12 +17,17 @@ namespace LFG
         public App()
         {
             _user = new Profile();
-            dummyprofile();
+
             //first time opening the app
-            //MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
-            MainPage = new NavigationPage(new MainPage());
+            //         //<dev>
+            //dummyprofile();
+            //         //</dev>
+            //MainPage = new NavigationPage(new MainPage());
+
+            NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
         }
 
