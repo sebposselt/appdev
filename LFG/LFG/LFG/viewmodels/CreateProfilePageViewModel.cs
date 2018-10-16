@@ -62,13 +62,10 @@ namespace LFG.viewmodels
         //    }
         //}
 
-
-        //TODO function to save PlayerProfile
-        public void Save()
+        public void Save() 
         {
             var app = Application.Current as App;
             app.User = PlayerProfile;
-
             _serializer.Save(PlayerProfile);
 
             navManager.SwitchPagePopCurrent(new MainPage());

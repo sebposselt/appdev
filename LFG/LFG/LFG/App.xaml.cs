@@ -19,13 +19,13 @@ namespace LFG
             _user = new Profile();
 
             //first time opening the app
-            MainPage = new NavigationPage(new WelcomePage());
+            //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
             //         //<dev>
-            //dummyprofile();
+            dummyprofile();
             //         //</dev>
-            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage());
 
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
