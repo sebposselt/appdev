@@ -6,4 +6,5 @@
     </TabbedPage.ToolbarItems>
     <pages:DisplayProfilePage Title="My profile" Icon="user.png"/>
     <pages:MatchMakingPage Title="LFG" Icon="match.png"/>
+    <pages:MatchesPage Title="Matches" Icon="teamwork.png"/>
 </TabbedPage>
