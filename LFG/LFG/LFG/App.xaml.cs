@@ -14,12 +14,14 @@ namespace LFG
         private Random r = new Random(42); //used for fakeprofile function
 
         private List<Profile> _matches;
+        private List<Profile> _potentialMatches;
         private Profile _user;
 
 
         public App()
         {
             _matches = new List<Profile>();
+            _potentialMatches = new List<Profile>();
             _user = new Profile();
 
             //first time opening the app
@@ -28,14 +30,20 @@ namespace LFG
             //profile already exists
 
             //         //<dev>
-            for (int i = 0; i < 11; i++)
-            {
-                _matches.Add(fakeprofile());
-            }
-            dummyprofile();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    _matches.Add(fakeprofile());
+            //}
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    _potentialMatches.Add(fakeprofile());
+            //}
+
+            //dummyprofile();
             //         //</dev>
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LFGFilterPage());
 
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
@@ -60,6 +68,17 @@ namespace LFG
             set
             {
                 _matches = value;
+            }
+        }
+        public List<Profile> PotentialMathces
+        {
+            get
+            {
+                return _potentialMatches;
+            }
+            set
+            {
+                _potentialMatches= value;
             }
         }
 
