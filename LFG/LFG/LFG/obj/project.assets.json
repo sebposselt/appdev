@@ -397,10 +397,11 @@
       ]
     },
     "PCLStorage/1.0.2": {
-      "sha512": "9If+1ZFCk3QaT/asfiL+J9FMnx2CTMrLCU8tDMUOI/aCGWGWl9vJ1/KcMkjf92op23ZknenvYJZBLDAqE3sFlg==",
+      "sha512": "gj37kg2DqlKADjnoax9wqSLSo9ZeEBRTEqfXg3R+fm2sbgst2B0Xa6TX1sh2ORrj83vk8lzyZ/DGEQx7c2QKPg==",
       "type": "package",
       "path": "pclstorage/1.0.2",
       "files": [
+        ".signature.p7s",
         "lib/monoandroid/PCLStorage.Abstractions.dll",
         "lib/monoandroid/PCLStorage.Abstractions.xml",
         "lib/monoandroid/PCLStorage.dll",
@@ -442,7 +443,7 @@
       ]
     },
     "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "YlFOM9u8onIRxJwYJ3l+O0wFKqzzrDjDrgnoBr1rct+eaQKU77vFydxvTP+WxYlYzR14hYvyLNC65L84+6ke6w==",
+      "sha512": "oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
@@ -601,23 +602,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/datamat/.nuget/packages/": {},
+    "/Users/FlyingPiano/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj",
+      "projectUniqueName": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG/LFG.csproj",
       "projectName": "LFG",
-      "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj",
-      "packagesPath": "/Users/datamat/.nuget/packages/",
-      "outputPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/obj",
+      "projectPath": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG/LFG.csproj",
+      "packagesPath": "/Users/FlyingPiano/.nuget/packages/",
+      "outputPath": "/Users/FlyingPiano/Desktop/School/Semester_2_2018/IAB330/appdev/LFG/LFG/LFG/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/datamat/.config/NuGet/NuGet.Config"
+        "/Users/FlyingPiano/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
