@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using LFG.views;
 using LFG.models;
+using LFG.tools;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
@@ -10,20 +11,47 @@ namespace LFG
     public partial class App : Application
     {
 
-
         private Profile _user;
+
 
         public App()
         {
-            InitializeComponent();
             _user = new Profile();
+
+            //first time opening the app
+            //MainPage = new NavigationPage(new WelcomePage());
+
+            //profile already exists
+            //         //<dev>
             dummyprofile();
-			MainPage = new NavigationPage(new WelcomePage());
+            //         //</dev>
+            MainPage = new NavigationPage(new MainPage());
+
+            NavigationManager.Instance.Navigation = MainPage.Navigation;
+            InitializeComponent();
         }
+
+        public Profile User 
+        { 
+            get 
+            { 
+                return _user; 
+            } 
+            set {
+                _user = value;
+            }
+        }
+
+
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+
+            //first time opening the app
+            //MainPage = new NavigationPage(new WelcomePage());
+
+            //profile already exists
+
         }
 
         protected override void OnSleep()

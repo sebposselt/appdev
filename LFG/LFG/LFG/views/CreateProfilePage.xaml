@@ -5,96 +5,151 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="LFG.views.CreateProfilePage">
     <ScrollView>
+<<<<<<< HEAD
         <TableView Intent="Form" HasUnevenRows="true">
+=======
+        <TableView Intent="Form" HasUnevenRows="true"  HeightRequest="50">
+>>>>>>> master
             <TableRoot>
                 <TableSection>
-                    <EntryCell Label="Username" Placeholder="(e.g. Slayer666)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    <EntryCell x:Name="username" Text="{Binding PlayerProfile.Username, Mode=TwoWay}" Label="Username"  Placeholder="(e.g. Slayer666)" Keyboard="Text" HorizontalTextAlignment="End"  />
                     <ViewCell Tapped="Region_Tapped">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Region" VerticalOptions="Center" />
-                            <Label x:Name="region" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Label x:Name="region" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="{Binding PlayerProfile.Region, Mode=TwoWay}" TextColor="Gray" />
                         </StackLayout>
                     </ViewCell>
                     
                     <ViewCell Tapped="Language_Tapped">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Language" VerticalOptions="Center" />
-                            <Label x:Name="language" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Label x:Name="language" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="{Binding PlayerProfile.Language, Mode=TwoWay}" TextColor="Gray" />
                         </StackLayout>
                     </ViewCell>
                     
                     <ViewCell Tapped="Age_Tapped">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Age" VerticalOptions="Center" />
-                            <Label x:Name="age" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Label x:Name="age" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="{Binding PlayerProfile.Age, Mode=TwoWay}" TextColor="Gray" />
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
-                
-                <!--TODO Make this Table section variable height and set a max character on the entry field!!-->
+            </TableRoot>
+            
+                <!--TODO Make this Table section variable height-->
                 <TableSection Title="Profile text">
-                    <ViewCell>
-                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="13, 5">
-                            <Editor AutoSize="TextChanges"   Text="e.g. Hi my name Phillip J. Fry!" VerticalOptions="FillAndExpand" MaxLength="240" Keyboard="Chat" IsSpellCheckEnabled="true" />
+                   <ViewCell>
+                        <StackLayout Padding="13, 5">
+                            <Editor x:Name="profiletext" AutoSize="TextChanges" Text="{Binding PlayerProfile.ProfileText, Mode=TwoWay}" MaxLength="240" Keyboard="Chat" IsSpellCheckEnabled="true" />
                         </StackLayout>
-                    </ViewCell>
+                    </ViewCell>               
                 </TableSection>
 
                 <TableSection Title="Game Tags">
-                    <EntryCell Label="Discord Tag" Placeholder="(e.g) CSGOSlayer42#5556" Keyboard="Chat"/>
-                    <EntryCell Label="Steam Tag" Placeholder="&lt;name&gt;" Keyboard="Chat"/>
-                    <EntryCell Label="PSN Tag" Placeholder="&lt;name&gt;" Keyboard="Chat"/>    
-                    <EntryCell Label="Xbox Tag" Placeholder="&lt;name&gt;" Keyboard="Chat"/>
+                    <EntryCell x:Name="discordtag" Label="Discord Tag" Text="{Binding PlayerProfile.DiscordTag, Mode=TwoWay}" Placeholder="(e.g) CSGOSlayer42#5556" Keyboard="Chat"/>
+                    <EntryCell x:Name="steamtag" Label="Steam Tag" Text="{Binding PlayerProfile.SteamTag, Mode=TwoWay}" Placeholder="&lt;name&gt;" Keyboard="Chat"/>
+                    <EntryCell x:Name="psntag" Label="PSN Tag" Text="{Binding PlayerProfile.PSNTag}" Placeholder="&lt;name&gt;" Keyboard="Chat"/>    
+                    <EntryCell x:Name="xboxtag" Label=" XboxLive Tag" Text="{Binding PlayerProfile.XboxLiveTag, Mode=TwoWay}" Placeholder="&lt;name&gt;" Keyboard="Chat"/>
                 </TableSection>                
                 
                 
                 <TableSection Title="Game #1">
-                    <EntryCell  Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    <EntryCell  Label="Game title" Text="{Binding PlayerProfile.Game1.Title, Mode=TwoWay}" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
                     
-                    <ViewCell Tapped="Platform_Tapped">
+                    <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Label x:Name="platform1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game1.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 
-                    <ViewCell Tapped="Skill_Tapped" x:Name="skill1viewcell">
+                    <ViewCell x:Name="skill1viewcell">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
-                            <Label Text="Skill Level" VerticalOptions="Center" />
-                            <Label x:Name="skill1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Picker x:Name="skill1" HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game1.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>  
                 </TableSection>
                 
-                
                 <TableSection Title="Game #2">
-                    <EntryCell HorizontalTextAlignment="End" Label="Game title" Placeholder="(e.g. CSGO)" Keyboard="Text" />
-<!--                    
-                    <ViewCell Tapped="Platform_Tapped">
+                    <EntryCell  Label="Game title" Text="{Binding PlayerProfile.Game2.Title, Mode=TwoWay}" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    
+                    <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Label x:Name="platform2" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game2.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 
-                    <ViewCell Tapped="Skill_Tapped">
+                    <ViewCell x:Name="skill2viewcell">
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
-                            <Label Text="Skill Level" VerticalOptions="Center" />
-                            <Label x:Name="skill2" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+                            <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game2.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
                         </StackLayout>
-                    </ViewCell>  -->
+                    </ViewCell>  
                 </TableSection>
+            
+            
+                <TableSection Title="Game #3">
+                    <EntryCell  Label="Game title" Text="{Binding PlayerProfile.Game3.Title, Mode=TwoWay}" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Platform" VerticalOptions="Center" />
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game3.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell x:Name="skill3viewcell">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Picker  HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game3.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
+                        </StackLayout>
+                    </ViewCell>  
+                </TableSection>
+            
+                <TableSection Title="Game #4">
+                    <EntryCell  Label="Game title" Text="{Binding PlayerProfile.Game4.Title, Mode=TwoWay}" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Platform" VerticalOptions="Center" />
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game4.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell x:Name="skill4viewcell">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game4.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
+                        </StackLayout>
+                    </ViewCell>  
+                </TableSection>
+            
+                <TableSection Title="Game #5">
+                    <EntryCell  Label="Game title" Text="{Binding PlayerProfile.Game5.Title, Mode=TwoWay}" Placeholder="(e.g. CSGO)" Keyboard="Text" HorizontalTextAlignment="End" />
+                    
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Platform" VerticalOptions="Center" />
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game5.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell x:Name="skill5viewcell">
+                        <StackLayout Orientation="Horizontal" Padding="13, 5">
+                            <Label Text="Skill Level" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game5.SkillLevel, Mode=TwoWay}" ItemsSource="{Binding SkillList}" ></Picker>    
+                        </StackLayout>
+                    </ViewCell>  
+                </TableSection>            
+            
                 
-                <!--TODO this is not a pretty way to do this..-->
                 <TableSection>
                     <ViewCell>
-                        <ViewCell.BindingContext>
-                            <local:CreateProfilePageViewModel/>
-                        </ViewCell.BindingContext>
-                        <Button Text="Save Profile" HorizontalOptions="Center" Command="{Binding SaveCommand}"/>
+                        <Button Text="Save Profile" HorizontalOptions="Center"  Command="{Binding SaveCommand}"/>
                     </ViewCell>    
                 </TableSection>
-            </TableRoot>
         </TableView>
         
     </ScrollView>
