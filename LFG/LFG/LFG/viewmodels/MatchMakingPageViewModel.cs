@@ -5,6 +5,7 @@ namespace LFG.viewmodels
     {
         public MatchMakingPageViewModel()
         {
+
         }
     }
 }
