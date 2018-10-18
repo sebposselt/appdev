@@ -57,7 +57,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game1.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Platform Level" SelectedItem="{Binding PlayerProfile.Game1.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 
@@ -75,7 +75,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game2.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Platform Level" SelectedItem="{Binding PlayerProfile.Game2.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 
@@ -94,7 +94,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game3.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Platform Level" SelectedItem="{Binding PlayerProfile.Game3.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 
@@ -112,7 +112,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game4.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Platform Level" SelectedItem="{Binding PlayerProfile.Game4.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 
@@ -130,7 +130,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13, 5">
                             <Label Text="Platform" VerticalOptions="Center" />
-                            <Picker HorizontalOptions="EndAndExpand" Title="Select Skill Level" SelectedItem="{Binding PlayerProfile.Game5.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
+                            <Picker HorizontalOptions="EndAndExpand" Title="Select Platform Level" SelectedItem="{Binding PlayerProfile.Game5.Platform, Mode=TwoWay}" ItemsSource="{Binding PlatformList}" ></Picker>    
                         </StackLayout>
                     </ViewCell>
 

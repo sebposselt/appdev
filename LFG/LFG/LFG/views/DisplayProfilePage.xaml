@@ -147,7 +147,7 @@
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25,Constant=0}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=35}" />
                 
-                <Editor  x:Name="profileText" AutoSize="TextChanges" Text="{Binding PlayerProfile.ProfileText}" MaxLength="240" TextColor="White" BackgroundColor="#3D54AD" IsEnabled="false" IsSpellCheckEnabled="false"
+                <Editor  x:Name="profileText" AutoSize="TextChanges" Text="{Binding PlayerProfile.ProfileText}" MaxLength="240" TextColor="White" BackgroundColor="#3D54AD" IsEnabled="false" IsSpellCheckEnabled="false" HeightRequest="115"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
                         ElementName=profileTextL,Property=Y,Factor=1,Constant=40}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=10}" 
@@ -160,7 +160,7 @@
                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                        BackgroundColor="#2F4399" HeightRequest="40"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
-                        ElementName=profileText,Property=Y,Factor=1, Constant=100}" 
+                        ElementName=profileText,Property=Y,Factor=1, Constant=130}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Constant=15}"/>
