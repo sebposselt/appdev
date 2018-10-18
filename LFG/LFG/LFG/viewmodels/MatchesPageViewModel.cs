@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using LFG.models;
 using LFG.tools;
+using LFG.views;
 using Xamarin.Forms;
 
 namespace LFG.viewmodels
@@ -44,6 +45,8 @@ namespace LFG.viewmodels
             set 
             {
                 _selectedProfile = value;
+                navManager.SwitchPage(new DisplayProfilePage(_selectedProfile));
+                //TODO fix so when you go back from the directed page, _selecteditem = null
                 OnPropertyChanged();
             }
         }

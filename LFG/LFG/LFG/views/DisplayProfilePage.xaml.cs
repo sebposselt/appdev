@@ -20,6 +20,13 @@ namespace LFG.views
             InitializeComponent();
         }
 
+        //TO display a specific profile and not the current users' profile
+        public DisplayProfilePage(Profile page)
+        {
+            _displayProfilePageViewModel = new DisplayProfilePageViewModel(page);
+            BindingContext = _displayProfilePageViewModel;
+            InitializeComponent();
+        }
 
 
 
