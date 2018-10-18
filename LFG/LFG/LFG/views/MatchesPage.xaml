@@ -5,7 +5,7 @@
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.ContextActions>
-                        <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference matchesage}}"/>
+                        <MenuItem Text="Delete" IsDestructive="true" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference matchesage}}"/>
                     </ViewCell.ContextActions>
                     <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Padding="5">
                         <Label VerticalTextAlignment="Center" x:Name="username" Text="{Binding Username}" HeightRequest="30" TextColor="Purple" BackgroundColor="Silver" />

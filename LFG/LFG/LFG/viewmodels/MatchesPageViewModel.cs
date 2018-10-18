@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using LFG.models;
+using LFG.tools;
 using Xamarin.Forms;
 
 namespace LFG.viewmodels
 {
     public class MatchesPageViewModel : ViewModelBase
     {
+        private NavigationManager navManager;
         private ObservableCollection<Profile> _matches;
         private Profile _selectedProfile;
 
         public MatchesPageViewModel()
         {
+            navManager = NavigationManager.Instance;
             var app = App.Current as App;
             List<Profile> tmp = app.Mathces;
             _matches = new ObservableCollection<Profile>(tmp);
-            DeleteCommand = new Command(() => Delete());
+            DeleteCommand = new Command<Profile>((Profile obj) => Delete(obj));
         }
 
         public ICommand DeleteCommand { get; private set; }
@@ -34,6 +37,7 @@ namespace LFG.viewmodels
                 OnPropertyChanged();
             }
         }
+
         public Profile SelectedProfile
         {
             get { return _selectedProfile; }
@@ -44,12 +48,11 @@ namespace LFG.viewmodels
             }
         }
 
-        private void Delete()
+        private void Delete(Profile profile)
         {
-            if (SelectedProfile != null)
+            if (profile != null)
             {
-                Mathces.Remove(SelectedProfile);
-
+                Mathces.Remove(profile);
             }
         }
 
