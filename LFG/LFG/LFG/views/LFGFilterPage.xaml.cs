@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using LFG.viewmodels;
 using Xamarin.Forms;
 
 namespace LFG.views
@@ -11,7 +11,27 @@ namespace LFG.views
         private List<string> _ageList;
         private List<string> _regionList;
         private List<string> _languageList;
+        private LFGFilterPageViewModel _LFGFilterPageViewModel;
+
+
         public LFGFilterPage()
+        {
+            _LFGFilterPageViewModel = new LFGFilterPageViewModel();
+            InitLists();
+            BindingContext = _LFGFilterPageViewModel;
+            InitializeComponent();
+
+            age.ItemsSource = AgeList;
+            region.ItemsSource = RegionList;
+            language.ItemsSource = LanguageList;
+        }
+
+        public List<string> AgeList { get { return _ageList; } }
+        public List<string> RegionList { get { return _regionList; } }
+        public List<string> LanguageList { get { return _languageList; } }
+
+
+        private void InitLists()
         {
             _ageList = new List<string>
             {
@@ -47,14 +67,8 @@ namespace LFG.views
                 "Africa",
                 "Asia"
             };
-            InitializeComponent();
-            age.ItemsSource = AgeList;
-            region.ItemsSource = RegionList;
-            language.ItemsSource = LanguageList;
         }
 
-        public List<string> AgeList { get { return _ageList; } }
-        public List<string> RegionList { get { return _regionList; } }
-        public List<string> LanguageList { get { return _languageList; } }
+
     }
 }

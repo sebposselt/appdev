@@ -16,34 +16,35 @@ namespace LFG
         private List<Profile> _matches;
         private List<Profile> _potentialMatches;
         private Profile _user;
-
+        private Dictionary<string, string> _searchFilter;
 
         public App()
         {
             _matches = new List<Profile>();
             _potentialMatches = new List<Profile>();
             _user = new Profile();
+            _searchFilter = new Dictionary<string, string>();
 
             //first time opening the app
             //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
 
-            //         //<dev>
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    _matches.Add(fakeprofile());
-            //}
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    _potentialMatches.Add(fakeprofile());
-            //}
+                     //<dev>
+            for (int i = 0; i < 10; i++)
+            {
+                _matches.Add(fakeprofile());
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                _potentialMatches.Add(fakeprofile());
+            }
 
-            //dummyprofile();
-            //         //</dev>
+            dummyprofile();
+                     //</dev>
 
-            //MainPage = new NavigationPage(new MainPage());
-            MainPage = new NavigationPage(new LFGFilterPage());
+            MainPage = new NavigationPage(new MainPage());
+
 
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
@@ -51,36 +52,29 @@ namespace LFG
 
         public Profile User 
         { 
-            get 
-            { 
-                return _user; 
-            } 
-            set {
-                _user = value;
-            }
+            get {return _user; } 
+            set {_user = value;}
         }
         public List<Profile> Mathces
         {
-            get
-            {
-                return _matches;
-            }
-            set
-            {
-                _matches = value;
-            }
+            get {return _matches;}
+            set {_matches = value;}
         }
         public List<Profile> PotentialMathces
         {
-            get
-            {
-                return _potentialMatches;
-            }
-            set
-            {
-                _potentialMatches= value;
-            }
+            get {return _potentialMatches;}
+            set {_potentialMatches= value;}
         }
+
+        public Dictionary<string,string> SearchFilter
+        {
+            get { return _searchFilter;}
+            set {_searchFilter = value;}
+        }
+
+
+
+
 
         protected override void OnStart()
         {
