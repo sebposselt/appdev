@@ -81,23 +81,23 @@ namespace LFG
 
             _user.Game1.Title = "CSGO1";
             _user.Game1.Platform = "PC";
-            _user.Game1.SkillLevel = "Experinced";
+            _user.Game1.SkillLevel = SkillLevel.Experinced;
 
             _user.Game2.Title = "CSGO2";
             _user.Game2.Platform = "PC";
-            _user.Game2.SkillLevel = "Experinced";
+            _user.Game2.SkillLevel = SkillLevel.Experinced;
 
             _user.Game3.Title = "CSGO3";
             _user.Game3.Platform = "PC";
-            _user.Game3.SkillLevel = "Experinced";
+            _user.Game3.SkillLevel = SkillLevel.Experinced;
 
             _user.Game4.Title = "CSGO4";
             _user.Game4.Platform = "PC";
-            _user.Game4.SkillLevel = "Experinced";
+            _user.Game4.SkillLevel = SkillLevel.Experinced;
 
             _user.Game5.Title = "CSGO5";
             _user.Game5.Platform = "PC";
-            _user.Game5.SkillLevel = "Experinced";
+            _user.Game5.SkillLevel = SkillLevel.Experinced;
         }
     }
 }

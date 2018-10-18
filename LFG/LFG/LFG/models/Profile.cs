@@ -3,7 +3,7 @@ using LFG.viewmodels;
 
 namespace LFG.models
 {
-    public class Profile
+    public class Profile : ViewModelBase
     {
         public string Username { get; set; }
         public string Region { get; set; }
@@ -15,8 +15,8 @@ namespace LFG.models
         public string DiscordTag { get; set; }
         public string PSNTag { get; set; }
 
-
-        public Game Game1 { get; set; }
+        private Game game1;
+        public Game Game1 { get { return game1; } set { game1 = value; OnPropertyChanged(); } }
         public Game Game2 { get; set; }
         public Game Game3 { get; set; }
         public Game Game4 { get; set; }

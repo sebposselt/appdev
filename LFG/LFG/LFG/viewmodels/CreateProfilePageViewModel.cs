@@ -15,12 +15,11 @@ namespace LFG.viewmodels
     {
         private Serialization _serializer;
         private NavigationManager navManager;
-        private List<string> _skillList = new List<string>
-        {
-            "Beginner",
-            "Intermediate",
-            "Experinced",
-            "Pro"
+        private List<SkillLevel> _skillList = new List<SkillLevel>{
+            SkillLevel.Beginner,
+            SkillLevel.Intermediate,
+            SkillLevel.Experinced,
+            SkillLevel.Pro
         };
         private List<string> _platformList = new List<String>
         {
@@ -42,7 +41,7 @@ namespace LFG.viewmodels
 
         public Profile PlayerProfile { get; set; }
         public ICommand SaveCommand { get; private set; }
-        public List<string> SkillList { get { return _skillList; } }
+        public List<SkillLevel> SkillList { get { return _skillList; } }
         public List<string> PlatformList { get { return _platformList; } }
 
 
