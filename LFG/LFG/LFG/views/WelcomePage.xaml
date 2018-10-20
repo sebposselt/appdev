@@ -3,10 +3,19 @@
     NavigationPage.HasNavigationBar="false"
     BackgroundColor="White"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.WelcomePage">
-    
-    
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" TextColor="Blue" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Button Text="Create Profile"  TextColor="Blue" BorderWidth="2" BorderColor="Blue" Clicked="Handle_Clicked"/>        
+    <StackLayout Padding="0, 30, 0, 0">
+        <StackLayout HeightRequest="400" BackgroundColor="White"
+        VerticalOptions="Start">
+            <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" 
+                   TextColor="Blue" 
+                   HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout HeightRequest="600" BackgroundColor="#3D54AD"
+        VerticalOptions="Start">
+        <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" 
+               TextColor="White" 
+               HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
     </StackLayout>
+    
 </ContentPage>
