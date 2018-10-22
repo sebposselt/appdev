@@ -107,7 +107,7 @@ namespace LFG
             navManager = NavigationManager.Instance;
 
             _serializer.Load(PlayerProfile);
-            navManager.SwitchPagePopCurrent(new DisplayProfilePage());
+            navManager.SwitchPagePopCurrent(new MainPage());
 
         }
 
