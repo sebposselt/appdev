@@ -33,4 +33,42 @@
       <HintPath>..\..\..\..\..\..\..\..\..\Library\Frameworks\Mono.framework\External\xbuild-frameworks\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\CreateProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\DisplayProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\MatchesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\MatchMakingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\profileViews\AgePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\profileViews\LanguagePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\profileViews\PlatformPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\profileViews\RegionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\profileViews\SkillPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="views\WelcomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
 </Project>

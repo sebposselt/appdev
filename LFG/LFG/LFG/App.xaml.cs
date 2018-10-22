@@ -74,12 +74,12 @@ namespace LFG
             //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
-            User = PlayerProfile;
+            //User = PlayerProfile;
             _serializer = new Serialization();
             navManager = NavigationManager.Instance;
 
             try {
-                _serializer.Load(PlayerProfile);
+                _serializer.Load(User);
             }
             catch (NullReferenceException e) {
                 if (e.Data == null) {
