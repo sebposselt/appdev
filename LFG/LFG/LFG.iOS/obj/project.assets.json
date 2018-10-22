@@ -859,31 +859,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/datamat/.nuget/packages/": {}
+    "C:\\Users\\dougl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
       "projectName": "LFG.iOS",
-      "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
-      "packagesPath": "/Users/datamat/.nuget/packages/",
-      "outputPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/obj",
+      "projectPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
+      "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.iOS\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/datamat/.config/NuGet/NuGet.Config"
+        "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj": {
-              "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj"
+            "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG\\LFG.csproj": {
+              "projectPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG\\LFG.csproj"
             }
           }
         }
@@ -894,11 +897,11 @@
         "dependencies": {
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "3.1.0.697729"
+            "version": "[3.1.0.697729, )"
           },
           "Xamarin.TestCloud.Agent": {
             "target": "Package",
-            "version": "0.21.4"
+            "version": "[0.21.4, )"
           }
         }
       }

@@ -5,6 +5,7 @@ using LFG.views;
 using LFG.models;
 using LFG.tools;
 using System.Collections.Generic;
+using PCLStorage;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
@@ -12,6 +13,9 @@ namespace LFG
     public partial class App : Application
     {
         private Random r = new Random(42); //used for fakeprofile function
+        public Profile PlayerProfile { get; set; }
+        private Serialization _serializer;
+        private NavigationManager navManager;
 
         private List<Profile> _matches;
         private Profile _user;
@@ -70,17 +74,41 @@ namespace LFG
             //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
+            User = PlayerProfile;
+            _serializer = new Serialization();
+            navManager = NavigationManager.Instance;
 
+            try {
+                _serializer.Load(PlayerProfile);
+            }
+            catch (NullReferenceException e) {
+                if (e.Data == null) {
+                    _serializer.Load(PlayerProfile);
+                    navManager.SwitchPage(new DisplayProfilePage());
+                }
+                else {
+                    //navManager.SwitchPage(new WelcomePage());
+                }
+            }
         }
 
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            _serializer = new Serialization();
+            _serializer.Save(User);
+
         }
 
         protected override void OnResume()
         {
             // Handle when your app resumes
+            _serializer = new Serialization();
+            navManager = NavigationManager.Instance;
+
+            _serializer.Load(PlayerProfile);
+            navManager.SwitchPagePopCurrent(new DisplayProfilePage());
+
         }
 
         /// <summary>

@@ -577,7 +577,7 @@
       ]
     },
     "Xamarin.Android.Support.v4/27.0.2.1": {
-      "sha512": "/tq1agjFA4D2NSSI6qDxSEhXaKq3YUn2tJhhURZneMMCUnFEiE0hafJRRqiYPB55AyBKStu9i+wa5P8GYqAhnw==",
+      "sha512": "cK4ixeeIPSF1xl371Rb2CiEMrSCXa5kXaehsSkeAFGtgpAQvbt6FbEKk501fzVi/HzNkETzajEtsQ9PMttZi9A==",
       "type": "package",
       "path": "xamarin.android.support.v4/27.0.2.1",
       "files": [
@@ -838,31 +838,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/datamat/.nuget/packages/": {}
+    "C:\\Users\\dougl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.Android/LFG.Android.csproj",
+      "projectUniqueName": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.Android\\LFG.Android.csproj",
       "projectName": "LFG.Android",
-      "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.Android/LFG.Android.csproj",
-      "packagesPath": "/Users/datamat/.nuget/packages/",
-      "outputPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.Android/obj",
+      "projectPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.Android\\LFG.Android.csproj",
+      "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG.Android\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/datamat/.config/NuGet/NuGet.Config"
+        "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid81"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj": {
-              "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj"
+            "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG\\LFG.csproj": {
+              "projectPath": "C:\\Users\\dougl\\Documents\\UNI\\Mobile App Development\\A1\\LFG\\LFG\\LFG\\LFG.csproj"
             }
           }
         }
@@ -871,29 +874,29 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "3.1.0.697729"
-          },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
-            "version": "27.0.2.1"
-          },
-          "Xamarin.Android.Support.v7.AppCompat": {
-            "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v4": {
             "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
+          },
+          "Xamarin.Android.Support.v7.AppCompat": {
+            "target": "Package",
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v7.CardView": {
             "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v7.MediaRouter": {
             "target": "Package",
-            "version": "27.0.2.1"
+            "version": "[27.0.2.1, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[3.1.0.697729, )"
           }
         }
       }
