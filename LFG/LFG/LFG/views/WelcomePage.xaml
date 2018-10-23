@@ -3,7 +3,7 @@
     NavigationPage.HasNavigationBar="false"
     BackgroundColor="White"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.WelcomePage">
-    <StackLayout Padding="0, 30, 0, 0">
+<!--    <StackLayout Padding="0, 30, 0, 0">
         <StackLayout HeightRequest="400" BackgroundColor="White"
         VerticalOptions="Start">
             <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" 
@@ -17,5 +17,32 @@
                HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>
     </StackLayout>
-    
+    -->
+    <RelativeLayout>
+        <BoxView BackgroundColor="White"  x:Name="whitebox"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.5}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+                 />
+        <BoxView BackgroundColor="#3D54AD" 
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=whitebox,Property=Height,Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.5}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+                 />
+        <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" 
+               TextColor="Black"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.5}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
+        <Button Text="Create Profile" BackgroundColor="Black" TextColor="White" Clicked="Handle_Clicked"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=50}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=whitebox,Property=Height,Factor=1.2}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               />
+    </RelativeLayout>
 </ContentPage>
