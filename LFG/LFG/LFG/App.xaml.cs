@@ -28,11 +28,9 @@ namespace LFG
             //profile already exists
 
             //         //<dev>
-<<<<<<< HEAD
             //dummyprofile();
             //         //</dev>
             //MainPage = new NavigationPage(new MainPage());
-=======
             for (int i = 0; i < 11; i++)
             {
                 _matches.Add(fakeprofile());
@@ -41,7 +39,6 @@ namespace LFG
             //         //</dev>
 
             MainPage = new NavigationPage(new MainPage());
->>>>>>> master
 
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
