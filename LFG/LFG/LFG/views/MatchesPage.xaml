@@ -7,8 +7,10 @@
                     <ViewCell.ContextActions>
                         <MenuItem Text="Delete" IsDestructive="true" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference matchesage}}"/>
                     </ViewCell.ContextActions>
-                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Padding="5">
-                        <Label VerticalTextAlignment="Center" x:Name="username" Text="{Binding Username}" HeightRequest="30" TextColor="Purple" BackgroundColor="Silver" />
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Padding="23, 20, 0, 5">
+                        <Label x:Name="username" Text="{Binding Username}" HeightRequest="30"
+                              VerticalTextAlignment="Center" 
+                              TextColor="Black" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
