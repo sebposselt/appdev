@@ -36,7 +36,6 @@ namespace LFG.viewmodels
         private void Search()
         {
             IsBusy = true;
-            OnIsBusyChanged();
             //create the dict
             _searchFilter = new Dictionary<string, string>();
             _searchFilter.Add("LANGUAGE", Language);
@@ -49,7 +48,6 @@ namespace LFG.viewmodels
 
             navManager.SwitchPage(new MatchMakingPage());
             IsBusy = false;
-            OnIsBusyChanged();
         }
     
     
