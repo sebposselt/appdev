@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.MatchMakingPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="This is a placeholder for the MatchMaking page.. Coming soon to smartphones near you!" TextColor="Red"/>
-    </StackLayout>
-</ContentPage>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.MatchMakingPage"
+              xmlns:pages="clr-namespace:LFG.views">
+</CarouselPage>
