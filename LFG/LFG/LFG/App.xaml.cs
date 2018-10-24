@@ -5,6 +5,7 @@ using LFG.views;
 using LFG.models;
 using LFG.tools;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 
 
 
@@ -15,11 +16,10 @@ namespace LFG
 {
     public partial class App : Application
     {
+
+        //opens connection TO azure DB
+        SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
         
-
-
-
-
     private Random r = new Random(42); //used for fakeprofile function
 
         private List<Profile> _matches;
@@ -61,6 +61,9 @@ namespace LFG
             set {
                 _user = value;
             }
+
+            
+
         }
         public List<Profile> Mathces
         {
@@ -128,6 +131,17 @@ namespace LFG
             _user.Game5.Title = "CSGO5";
             _user.Game5.Platform = "PC";
             _user.Game5.SkillLevel = "Experinced";
+
+            //Save data to DB
+            string pull = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
+                "Values ('" + _user.Username + "', '" + _user.Region + "', '" + _user.Language + "', '" + _user.Age + "', '" + _user.ProfileText + "', " +
+                "'" + _user.SteamTag + "', '" + _user.DiscordTag + "', '" + _user.XboxLiveTag + "', '" + _user.PSNTag + "', '" + _user.Game1.Title + "', '" + _user.Game2.Title + "'," +
+                " '" + _user.Game3.Title + "', '" + _user.Game4.Title + "', '" + _user.Game5.Title + "')";
+
+            SqlCommand save = new SqlCommand(pull, DB);
+            DB.Open();
+            save.ExecuteNonQuery();
+            DB.Close();
         }
 
         private Profile fakeprofile()
