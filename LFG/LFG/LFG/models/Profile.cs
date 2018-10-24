@@ -1,26 +1,28 @@
 ﻿using System;
 using LFG.viewmodels;
+using System.Runtime.Serialization;
 
 namespace LFG.models
 {
+    [DataContract]
     public class Profile
     {
-        public string Username { get; set; }
-        public string Region { get; set; }
-        public string Language { get; set; }
-        public string Age { get; set; }
-        public string ProfileText { get; set; }
-        public string SteamTag { get; set; }
-        public string XboxLiveTag { get; set; }
-        public string DiscordTag { get; set; }
-        public string PSNTag { get; set; }
+        [DataMember] public string Username { get; set; }
+        [DataMember] public string Region { get; set; }
+        [DataMember] public string Language { get; set; }
+        [DataMember] public string Age { get; set; }
+        [DataMember] public string ProfileText { get; set; }
+        [DataMember] public string SteamTag { get; set; }
+        [DataMember] public string XboxLiveTag { get; set; }
+        [DataMember] public string DiscordTag { get; set; }
+        [DataMember] public string PSNTag { get; set; }
 
 
-        public Game Game1 { get; set; }
-        public Game Game2 { get; set; }
-        public Game Game3 { get; set; }
-        public Game Game4 { get; set; }
-        public Game Game5 { get; set; }
+        [DataMember] public Game Game1 { get; set; }
+        [DataMember] public Game Game2 { get; set; }
+        [DataMember] public Game Game3 { get; set; }
+        [DataMember] public Game Game4 { get; set; }
+        [DataMember] public Game Game5 { get; set; }
 
         public Profile()
         {

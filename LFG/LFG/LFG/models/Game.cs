@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Runtime.Serialization;
 namespace LFG.models
 {
+    [DataContract]
     public class Game
     {
-        public string Title { get; set; }
-        public string Platform { get; set; }
-        public string SkillLevel { get; set; }
+        [DataMember] public string Title { get; set; }
+        [DataMember] public string Platform { get; set; }
+        [DataMember] public string SkillLevel { get; set; }
 
 
         public Game()
