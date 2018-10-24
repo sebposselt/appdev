@@ -1,8 +1,14 @@
 ﻿using System;
 using LFG.viewmodels;
+using Microsoft.WindowsAzure.MobileServices;
+
+
+
 
 namespace LFG.models
 {
+    
+
     public class Profile
     {
         public string Username { get; set; }

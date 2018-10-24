@@ -6,24 +6,35 @@ using LFG.models;
 using LFG.tools;
 using System.Collections.Generic;
 
+
+
+
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
 {
     public partial class App : Application
     {
-        private Random r = new Random(42); //used for fakeprofile function
+        
+
+
+
+
+    private Random r = new Random(42); //used for fakeprofile function
 
         private List<Profile> _matches;
         private Profile _user;
 
 
+
         public App()
         {
+
             _matches = new List<Profile>();
             _user = new Profile();
 
             //first time opening the app
-            //MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
 
@@ -67,7 +78,7 @@ namespace LFG
         {
 
             //first time opening the app
-            //MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
 
@@ -122,15 +133,15 @@ namespace LFG
         private Profile fakeprofile()
         {
             var _user = new Profile();
-            _user.Username = "FryASÆDJKASFJÆJKL";
+            _user.Username = " + _user.Username + "; 
             _user.Region = "Europe";
             _user.Language = "English";
             _user.Age = "46-55";
             _user.ProfileText = "My name is Phillip J. Fry, and I come from the year 2000";
-            _user.SteamTag = "FrenchFry";
+            _user.SteamTag = "FrenchFry1";
             _user.DiscordTag = "FrenchFry#5556";
             _user.XboxLiveTag = "FrenchFry";
-            _user.PSNTag = "FrenchFry";
+            _user.PSNTag = "FrenchFry1";
             _user.Game1.Title = "CSGO1";
             _user.Game1.Platform = "PC";
             _user.Game1.SkillLevel = "Experinced";
@@ -146,6 +157,8 @@ namespace LFG
             _user.Game5.Title = "CSGO5";
             _user.Game5.Platform = "PC";
             _user.Game5.SkillLevel = "Experinced";
+
+            
 
             _user.Username += r.Next(1, 101);
             return _user;
