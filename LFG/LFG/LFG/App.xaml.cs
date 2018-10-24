@@ -14,7 +14,6 @@ namespace LFG
     public partial class App : Application
     {
         private Random r = new Random(42); //used for fakeprofile function
-        public Profile PlayerProfile;
         private Serialization _serializer;
         private NavigationManager navManager;
         private bool profileExists = true;
@@ -27,7 +26,6 @@ namespace LFG
         {
             _matches = new List<Profile>();
             _user = new Profile();
-            PlayerProfile = new Profile();
             _serializer = new Serialization();
             navManager = NavigationManager.Instance;
 
@@ -81,15 +79,15 @@ namespace LFG
             //profile already exists
             //User = PlayerProfile;
 
-            Task.Run(async () => { await Starter(); }).Wait();
+            Task.Run(async () => { await Loader(); }).Wait();
 
-            if (PlayerProfile == null) {
+            if (User.Username == null) {
                 profileExists = false;
             }
 
             if (profileExists) {
-                Task.Run(async () => { await Starter(); }).Wait();
-                navManager.SwitchPagePopCurrent(new MainPage());
+                MainPage = new NavigationPage(new MainPage());
+                NavigationManager.Instance.Navigation = MainPage.Navigation;
             } else {
                 navManager.SwitchPage(new WelcomePage());
             }
@@ -99,7 +97,7 @@ namespace LFG
         {
             // Handle when your app sleeps
 
-            Task.Run(async () => { await _serializer.Save(PlayerProfile); }).Wait();
+            Task.Run(async () => { await _serializer.Save(User); }).Wait();
 
         }
 
@@ -107,7 +105,7 @@ namespace LFG
         {
             // Handle when your app resumes
 
-            Task.Run(async () => { await Starter(); }).Wait();
+            Task.Run(async () => { await Loader(); }).Wait();
 
             navManager.SwitchPagePopCurrent(new MainPage());
 
@@ -181,9 +179,9 @@ namespace LFG
             return _user;
         }
 
-        private async Task<Profile> Starter() {
-            PlayerProfile =  await _serializer.Load<Profile>();
-            return PlayerProfile;
+        private async Task<Profile> Loader() {
+            User =  await _serializer.Load<Profile>();
+            return User;
         }
 
 
