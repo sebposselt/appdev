@@ -28,12 +28,22 @@ namespace LFG.tools
         private void GameSerialization()
         {
             var app = App.Current as App;
-
             Game1 = JsonConvert.SerializeObject(app.User.Game1);
             Game2 = JsonConvert.SerializeObject(app.User.Game2);
             Game3 = JsonConvert.SerializeObject(app.User.Game3);
             Game4 = JsonConvert.SerializeObject(app.User.Game4);
             Game5 = JsonConvert.SerializeObject(app.User.Game5);
+        }
+
+        private void GameSerialization_DEV(Profile User)
+        {
+
+            var app = App.Current as App;
+            Game1 = JsonConvert.SerializeObject(User.Game1);
+            Game2 = JsonConvert.SerializeObject(User.Game2);
+            Game3 = JsonConvert.SerializeObject(User.Game3);
+            Game4 = JsonConvert.SerializeObject(User.Game4);
+            Game5 = JsonConvert.SerializeObject(User.Game5);
         }
 
 
@@ -64,7 +74,7 @@ namespace LFG.tools
             //opens connection TO azure DB
             SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
 
-            GameSerialization();
+            GameSerialization_DEV(User);
 
             //Save data to DB
             string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +

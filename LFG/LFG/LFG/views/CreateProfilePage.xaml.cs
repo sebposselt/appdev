@@ -31,8 +31,6 @@ namespace LFG.views
 
         }
 
-
-
         void Region_Tapped(object sender, System.EventArgs e)
         {
             var page = new profileViews.RegionPage();
@@ -41,7 +39,6 @@ namespace LFG.views
                 region.Text = args.SelectedItem.ToString();
                 // is this okay according to MVVM?? I don't know
                 _createProfilePageViewModel.PlayerProfile.Region = args.SelectedItem.ToString();
-                Debug.WriteLine(_createProfilePageViewModel.PlayerProfile.Region);
                 Navigation.PopAsync();
             };
             Navigation.PushAsync(page);
