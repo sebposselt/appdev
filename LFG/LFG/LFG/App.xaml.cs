@@ -22,11 +22,12 @@ namespace LFG
         private List<Profile> _potentialMatches;
         private Profile _user;
         private Dictionary<string, string> _searchFilter;
-        private string Game1;
-        private string Game2;
-        private string Game3;
-        private string Game4;
-        private string Game5;
+        public string Game1;
+        public string Game2;
+        public string Game3;
+        public string Game4;
+        public string Game5;
+        private bool isID = false;
 
 
         public App()
@@ -63,8 +64,6 @@ namespace LFG
             MainPage = new NavigationPage(new MainPage());
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
-
-            PullFromDB();
 
         }
 
@@ -246,13 +245,21 @@ namespace LFG
                     {
                         string propertyName = reader.GetName(i);
                         string data = reader.GetValue(i).ToString();
+                        if (propertyName.StartsWith("ID")) {
+                            isID = true;
+                        } else {
+                            isID = false;
+                        }
+
                         if (propertyName.StartsWith("Game")) {
                             Game tmpGame = new Game();
                             tmpGame = JsonConvert.DeserializeObject<Game>(data);
                             tmp[propertyName] = tmpGame;
                         }
                         else {
-                            tmp[propertyName] = data;
+                            if (!isID) {
+                                tmp[propertyName] = data;
+                            }
                         }
                     }
                     PotentialMathces.Add(tmp);
@@ -266,7 +273,7 @@ namespace LFG
             DB.Close();
         }
 
-        private void GameSerialization() {
+        public void GameSerialization() {
             Game1 = JsonConvert.SerializeObject(User.Game1);
             Game2 = JsonConvert.SerializeObject(User.Game2);
             Game3 = JsonConvert.SerializeObject(User.Game3);
