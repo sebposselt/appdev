@@ -6,9 +6,10 @@ using LFG.models;
 using LFG.tools;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
+using System.Threading.Tasks;
 
-
-
+using System.Reflection;
 
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,12 +17,7 @@ namespace LFG
 {
     public partial class App : Application
     {
-
-        //opens connection TO azure DB
-        SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
-        
-    private Random r = new Random(42); //used for fakeprofile function
-
+        private Random r = new Random(42); //used for fakeprofile function
         private List<Profile> _matches;
         private List<Profile> _potentialMatches;
         private Profile _user;
@@ -30,34 +26,41 @@ namespace LFG
 
         public App()
         {
-
             _matches = new List<Profile>();
             _potentialMatches = new List<Profile>();
             _user = new Profile();
             _searchFilter = new Dictionary<string, string>();
 
             //first time opening the app
-            MainPage = new NavigationPage(new WelcomePage());
+            //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
 
             //         //</dev>
-            for (int i = 0; i < 10; i++)
-            {
-                _matches.Add(fakeprofile());
-            }
-            for (int i = 0; i < 20; i++)
-            {
-                _potentialMatches.Add(fakeprofile());
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    _matches.Add(fakeprofile());
+            //}
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    fakeprofile();
+            //    //Profile tmp = fakeprofile();
+            //    //Task.Run(() =>
+            //    //{
+            //    //    PushToDB2(tmp);
+            //    //});
+            //}
             dummyprofile();
+
+
                      //</dev>
 
             MainPage = new NavigationPage(new MainPage());
-
-
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
+
+            PullFromDB();
+
         }
 
         public Profile User 
@@ -86,7 +89,7 @@ namespace LFG
         {
 
             //first time opening the app
-            MainPage = new NavigationPage(new WelcomePage());
+            //MainPage = new NavigationPage(new WelcomePage());
 
             //profile already exists
 
@@ -136,20 +139,9 @@ namespace LFG
             _user.Game5.Title = "CSGO5";
             _user.Game5.Platform = "PC";
             _user.Game5.SkillLevel = "Experinced";
-
-            //Save data to DB
-            string pull = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
-                "Values ('" + _user.Username + "', '" + _user.Region + "', '" + _user.Language + "', '" + _user.Age + "', '" + _user.ProfileText + "', " +
-                "'" + _user.SteamTag + "', '" + _user.DiscordTag + "', '" + _user.XboxLiveTag + "', '" + _user.PSNTag + "', '" + _user.Game1.Title + "', '" + _user.Game2.Title + "'," +
-                " '" + _user.Game3.Title + "', '" + _user.Game4.Title + "', '" + _user.Game5.Title + "')";
-
-            SqlCommand save = new SqlCommand(pull, DB);
-            DB.Open();
-            save.ExecuteNonQuery();
-            DB.Close();
         }
 
-        private Profile fakeprofile()
+        private void fakeprofile()
         {
             var _user = new Profile();
             _user.Username = "Fry"; 
@@ -177,13 +169,91 @@ namespace LFG
             _user.Game5.Platform = "PC";
             _user.Game5.SkillLevel = "Experinced";
 
-            
-
-            _user.Username += r.Next(1, 101);
-            return _user;
+            _user.Username += r.Next(1, 1001);
+            PushToDB2(_user);
         }
 
 
+
+        private void PushToDB()
+        {
+            //opens connection TO azure DB
+            SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+            var app = App.Current as App;
+
+            //Save data to DB
+            string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
+                "Values ('" + app.User.Username + "', '" + app.User.Region + "', '" + app.User.Language + "', '" + app.User.Age + "', '" + app.User.ProfileText + "', " +
+                "'" + app.User.SteamTag + "', '" + app.User.DiscordTag + "', '" + app.User.XboxLiveTag + "', '" + app.User.PSNTag + "', '" + app.User.Game1.Title + "', '" + app.User.Game2.Title + "'," +
+                " '" + app.User.Game3.Title + "', '" + app.User.Game4.Title + "', '" + app.User.Game5.Title + "')";
+
+            SqlCommand save = new SqlCommand(push, DB);
+            DB.Open();
+            save.ExecuteNonQuery();
+            DB.Close();
+        }
+
+        private void PushToDB2(Profile profile)
+        {
+            User = profile;
+            //opens connection TO azure DB
+            SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+            var app = App.Current as App;
+
+            //Save data to DB
+            string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
+                "Values ('" + User.Username + "', '" + User.Region + "', '" + User.Language + "', '" + User.Age + "', '" + User.ProfileText + "', " +
+                "'" + User.SteamTag + "', '" + User.DiscordTag + "', '" + User.XboxLiveTag + "', '" + User.PSNTag + "', '" + User.Game1.Title + "', '" + User.Game2.Title + "'," +
+                " '" + User.Game3.Title + "', '" + User.Game4.Title + "', '" + User.Game5.Title + "')";
+
+            SqlCommand save = new SqlCommand(push, DB);
+            DB.Open();
+            save.ExecuteNonQuery();
+            DB.Close();
+        }
+
+        private void PullFromDB()
+        {
+
+            //opens connection TO azure DB
+            SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+
+            cmd.CommandText = "SELECT * FROM LFGdb";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = DB;
+
+            DB.Open();
+
+            reader = cmd.ExecuteReader();
+            // Data is accessible through the DataReader object here.
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Profile tmp = new Profile();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        string propertyName = reader.GetName(i);
+                        string data = reader.GetValue(i).ToString();
+                        if (propertyName.StartsWith("Game") )
+                        {
+                            continue;
+                        }
+                        tmp[propertyName] = data;
+                    }
+                    PotentialMathces.Add(tmp);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No rows found.");
+            }
+            reader.Close();
+            DB.Close();
+        }
 
 
     }

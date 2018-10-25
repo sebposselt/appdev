@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows.Input;
 using LFG.models;
@@ -51,5 +53,59 @@ namespace LFG.viewmodels
         }
     
     
+        private void PushToDB()
+        {
+            //opens connection TO azure DB
+            SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+            var app = App.Current as App;
+
+            //Save data to DB
+            string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
+                "Values ('" + app.User.Username + "', '" + app.User.Region + "', '" + app.User.Language + "', '" + app.User.Age + "', '" + app.User.ProfileText + "', " +
+                "'" + app.User.SteamTag + "', '" + app.User.DiscordTag + "', '" + app.User.XboxLiveTag + "', '" + app.User.PSNTag + "', '" + app.User.Game1.Title + "', '" + app.User.Game2.Title + "'," +
+                " '" + app.User.Game3.Title + "', '" + app.User.Game4.Title + "', '" + app.User.Game5.Title + "')";
+
+            SqlCommand save = new SqlCommand(push, DB);
+            DB.Open();
+            save.ExecuteNonQuery();
+            DB.Close();
+        }
+
+        private void PullFromDB()
+        {
+
+            //opens connection TO azure DB
+            SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+
+            cmd.CommandText = "SELECT * FROM LFGdb";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = DB;
+
+            DB.Open();
+
+            reader = cmd.ExecuteReader();
+            // Data is accessible through the DataReader object here.
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        string data = reader.GetValue(i).ToString();
+                        Console.WriteLine(data + '\n');
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No rows found.");
+            }
+            reader.Close();
+            DB.Close();
+        }
+
     }
 }
