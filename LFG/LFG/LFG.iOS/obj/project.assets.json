@@ -1447,10 +1447,11 @@
       ]
     },
     "Newtonsoft.Json/9.0.1": {
-      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
+      "sha512": "2okXpTRwUcgQb06put5LwwCjtgoFo74zkPksjcvOpnIjx7TagGW5IoBCAA4luZx1+tfiIhoNqoiI7Y7zwWGyKA==",
       "type": "package",
       "path": "newtonsoft.json/9.0.1",
       "files": [
+        ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -1471,10 +1472,11 @@
       ]
     },
     "PCLCrypto/2.0.147": {
-      "sha512": "OFNDBjhP+qPukqB8PiGbWDo70gHsEzSKupL47JisjYFQaGwlPPCnN8ah59QCzIvsg9IUr2AecGKXF3ONpyFL9g==",
+      "sha512": "6OrER+34zF16Oy/SFRwOyPlb5S90oau3I4KGSi0MLphcIm5917eu0nOGlJqo8br1kpSdzwqIjyHw4FkD7lYpuA==",
       "type": "package",
       "path": "pclcrypto/2.0.147",
       "files": [
+        ".signature.p7s",
         "lib/MonoAndroid23/PCLCrypto.dll",
         "lib/MonoAndroid23/PCLCrypto.xml",
         "lib/MonoTouch10/PCLCrypto.dll",
@@ -1494,11 +1496,10 @@
       ]
     },
     "PCLStorage/1.0.2": {
-      "sha512": "gj37kg2DqlKADjnoax9wqSLSo9ZeEBRTEqfXg3R+fm2sbgst2B0Xa6TX1sh2ORrj83vk8lzyZ/DGEQx7c2QKPg==",
+      "sha512": "9If+1ZFCk3QaT/asfiL+J9FMnx2CTMrLCU8tDMUOI/aCGWGWl9vJ1/KcMkjf92op23ZknenvYJZBLDAqE3sFlg==",
       "type": "package",
       "path": "pclstorage/1.0.2",
       "files": [
-        ".signature.p7s",
         "lib/monoandroid/PCLStorage.Abstractions.dll",
         "lib/monoandroid/PCLStorage.Abstractions.xml",
         "lib/monoandroid/PCLStorage.dll",
@@ -1540,10 +1541,11 @@
       ]
     },
     "PInvoke.BCrypt/0.3.2": {
-      "sha512": "6nSjPx88F+dcQgxfbM/lkYhi/zQWxwBcGAS3de/Q7YmPr5QdLNv5ZMk2UEFpMQhlFNya4TdUy5i3HKA12uMa7Q==",
+      "sha512": "tMQOWiVSboRj/jtJ3SU4hQdQ8lqj5mh2zdAkw9UpOrDGISAlwEjLVlEGKgKA6calRKalPnAQ9U+ZsVIZmT8jvQ==",
       "type": "package",
       "path": "pinvoke.bcrypt/0.3.2",
       "files": [
+        ".signature.p7s",
         "lib/net40/PInvoke.BCrypt.dll",
         "lib/net40/PInvoke.BCrypt.xml",
         "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll",
@@ -1555,10 +1557,11 @@
       ]
     },
     "PInvoke.Kernel32/0.3.2": {
-      "sha512": "zkd5Vc5AQ9B489GMNlmd0wdKnRoLl1B/TnouwcjtaqWbDJ17TQSvBRnV7xjVEpBHQtL/248EaUTcDprJe9bZMA==",
+      "sha512": "MbxgOKWRdrpwlMX0QQQsjkS0cB0svIziyK2yXtg0SVSR2TNUx83WnGo3wAURimoGRIqnzzRSEmDcQM/hoMza5g==",
       "type": "package",
       "path": "pinvoke.kernel32/0.3.2",
       "files": [
+        ".signature.p7s",
         "lib/net40/PInvoke.Kernel32.dll",
         "lib/net40/PInvoke.Kernel32.xml",
         "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll",
@@ -1570,10 +1573,11 @@
       ]
     },
     "PInvoke.NCrypt/0.3.2": {
-      "sha512": "s7SIBXlr3qolZaM5mGEXG2sKBY4yFVHTWBlwhRC93le08Aj+n/IaFVnB9LBFv6mpCCivXdzad+9EX6HHds4PyQ==",
+      "sha512": "/hP4+9iYAp3i2GfLVePZetLG3eXok5kGV9HCeRuqLQ+drcmhrvLaxTNMpnoCErYUq0KinEHRFxKCGVpqzUNWuQ==",
       "type": "package",
       "path": "pinvoke.ncrypt/0.3.2",
       "files": [
+        ".signature.p7s",
         "lib/net40/PInvoke.NCrypt.dll",
         "lib/net40/PInvoke.NCrypt.xml",
         "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll",
@@ -1585,10 +1589,11 @@
       ]
     },
     "PInvoke.Windows.Core/0.3.2": {
-      "sha512": "cLG8L2mBqeM6mwKxYg34uZnW5A4cAqyWY4nh+ogxon6BOPLcuQ2QSK/b1IKduUIQg6mDgf06rZUVbuVVPi9+fg==",
+      "sha512": "NIJtaR+xKX7AFRyMJltgvhYvEIotQ5DK98ssBQcRprEBQg7X9Dmudfd73yND4LmztHMxeUX3YXGs3xDz81iVSw==",
       "type": "package",
       "path": "pinvoke.windows.core/0.3.2",
       "files": [
+        ".signature.p7s",
         "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll",
         "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.xml",
         "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll",
@@ -1835,10 +1840,11 @@
       ]
     },
     "Validation/2.2.8": {
-      "sha512": "DMNc7JhPlgRwnR+NNb+ldoluObL+RBw96aMoiZae/Looa4vgaAnIysmle/bV2OKqDNW9oUBDckPyfa2+sX6JdA==",
+      "sha512": "iJw91U8iTBw5RqdK8lIHzDIc5M9vYH/JQbtJ5sIGm2CQGoO2Wh4l0hte/o55M6yrlz6MvaNxNK1dinB27ND7SA==",
       "type": "package",
       "path": "validation/2.2.8",
       "files": [
+        ".signature.p7s",
         "README.md",
         "lib/dotnet/Validation.dll",
         "lib/dotnet/Validation.xml",
@@ -2008,11 +2014,10 @@
       ]
     },
     "Xamarin.TestCloud.Agent/0.21.4": {
-      "sha512": "y9nrNBemjJ+Wn3viPJF5hBJXti8MNJyVbQ2B6RVkfEkjh7Q0YhKnZ9rLQ7Hp8itRMLDOIsEc0IzmQ6kUD3CtDQ==",
+      "sha512": "VU8BFlITXcnFXbsBT/60tB83ud2kUTrn0oBT2X6WgMqzICEh+5ELM7gIihcB30bnMHuC1aeEJ75T1Ft8YeYkBw==",
       "type": "package",
       "path": "xamarin.testcloud.agent/0.21.4",
       "files": [
-        ".signature.p7s",
         "lib/Xamarin.iOS/Calabash.dll",
         "xamarin.testcloud.agent.0.21.4.nupkg.sha512",
         "xamarin.testcloud.agent.nuspec"
@@ -2032,34 +2037,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jordan\\.nuget\\packages\\": {}
+    "/Users/datamat/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jordan\\Documents\\GitHub\\appdev\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
+      "projectUniqueName": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
       "projectName": "LFG.iOS",
-      "projectPath": "C:\\Users\\Jordan\\Documents\\GitHub\\appdev\\LFG\\LFG\\LFG.iOS\\LFG.iOS.csproj",
-      "packagesPath": "C:\\Users\\Jordan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jordan\\Documents\\GitHub\\appdev\\LFG\\LFG\\LFG.iOS\\obj\\",
+      "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/LFG.iOS.csproj",
+      "packagesPath": "/Users/datamat/.nuget/packages/",
+      "outputPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG.iOS/obj",
       "projectStyle": "PackageReference",
-      "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Jordan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/datamat/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Jordan\\Documents\\GitHub\\appdev\\LFG\\LFG\\LFG\\LFG.csproj": {
-              "projectPath": "C:\\Users\\Jordan\\Documents\\GitHub\\appdev\\LFG\\LFG\\LFG\\LFG.csproj"
+            "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj": {
+              "projectPath": "/Users/datamat/Documents/qut/iab330/appdev/LFG/LFG/LFG/LFG.csproj"
             }
           }
         }
@@ -2070,11 +2072,11 @@
         "dependencies": {
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "3.1.0.697729"
           },
           "Xamarin.TestCloud.Agent": {
             "target": "Package",
-            "version": "[0.21.4, )"
+            "version": "0.21.4"
           }
         }
       }
@@ -2096,7 +2098,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 3.3.0.912540 to 3.1.0.697729. Reference the package directly from the project to select a different version. \r\n LFG.iOS -> LFG -> Xamarin.Forms (>= 3.3.0.912540) \r\n LFG.iOS -> Xamarin.Forms (>= 3.1.0.697729)",
+      "message": "Detected package downgrade: Xamarin.Forms from 3.3.0.912540 to 3.1.0.697729. Reference the package directly from the project to select a different version. \n LFG.iOS (>= 1.0.0) -> LFG (>= 1.0.0) -> Xamarin.Forms (>= 3.3.0.912540) \n LFG.iOS (>= 1.0.0) -> Xamarin.Forms (>= 3.1.0.697729)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0",

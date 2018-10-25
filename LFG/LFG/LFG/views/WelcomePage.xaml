@@ -1,12 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
     NavigationPage.HasNavigationBar="false"
-    BackgroundColor="Black"
+    BackgroundColor="White"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.WelcomePage">
-    
-    
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" TextColor="Blue" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Button Text="Create Profile"  TextColor="Blue" BorderWidth="2" BorderColor="Blue" Clicked="Handle_Clicked"/>        
+<!--    <StackLayout Padding="0, 30, 0, 0">
+        <StackLayout HeightRequest="400" BackgroundColor="White"
+        VerticalOptions="Start">
+            <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" 
+                   TextColor="Blue" 
+                   HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout HeightRequest="600" BackgroundColor="#3D54AD"
+        VerticalOptions="Start">
+        <Label Text="Welcome to LFG. Our goal is to help you find like-minded players for your favorite games!" 
+               TextColor="White" 
+               HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
     </StackLayout>
+    -->
+    <RelativeLayout>
+        <BoxView BackgroundColor="White"  x:Name="whitebox"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.4}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+                 />
+        <BoxView BackgroundColor="#3D54AD" 
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=whitebox,Property=Height,Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.6}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+                 />
+        <Label Text="LFG" 
+               TextColor="#3D54AD" FontSize="38" FontAttributes="Bold"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.4}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
+        <Label Text="Connecting players to you." 
+               TextColor="#3D54AD" FontSize="21"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.48}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
+        <Button Text=" Create Profile " FontAttributes="Bold" FontSize="28" Clicked="Handle_Clicked" 
+               BackgroundColor="#3D54AD" TextColor="White" 
+               BorderColor="White" BorderWidth="2"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=50}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=whitebox,Property=Height,Factor=1.2}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               />
+    </RelativeLayout>
 </ContentPage>

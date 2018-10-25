@@ -20,7 +20,7 @@ namespace LFG.viewmodels
         {
             "Beginner",
             "Intermediate",
-            "Experinced",
+            "Experienced",
             "Pro"
         };
         private List<string> _platformList = new List<String>
