@@ -152,7 +152,7 @@ namespace LFG
         private Profile fakeprofile()
         {
             var _user = new Profile();
-            _user.Username = " + _user.Username + "; 
+            _user.Username = "Fry"; 
             _user.Region = "Europe";
             _user.Language = "English";
             _user.Age = "46-55";
