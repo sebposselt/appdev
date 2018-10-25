@@ -2,27 +2,33 @@
 using System.Collections.Generic;
 using LFG.models;
 using Xamarin.Forms;
+using LFG.viewmodels;
 
 namespace LFG.views
 {
     public partial class YesNoPage : ContentPage
     {
+        private MatchMakingPageViewModel _matchMakingPageViewModel;
+        private Profile _profile;
+
+
         public YesNoPage(Profile profile)
         {
-
+            _profile = profile;
+            _matchMakingPageViewModel = new MatchMakingPageViewModel();
+            _matchMakingPageViewModel.MatchProfile = profile;
+            BindingContext = _matchMakingPageViewModel;
             var tmp = new ProfileView(profile);
             InitializeComponent();
             profilePlaceHolder.Children.Add(tmp);
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+
+        public Profile MatchProfile
         {
-            Console.WriteLine("yes clicked");
+            get { return _profile; }
+            private set { _profile = value; }
         }
 
-        void Handle_Clicked_1(object sender, System.EventArgs e)
-        {
-            Console.WriteLine("no clicked");
-        }
     }
 }

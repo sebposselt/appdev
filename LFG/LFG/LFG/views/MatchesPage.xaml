@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage x:Name="matchespage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.MatchesPage">
-    <ListView x:Name="matchlist" ItemsSource="{Binding Mathces}" SelectedItem="{Binding SelectedProfile,Mode=TwoWay}">
+    <ListView x:Name="matchlist" ItemsSource="{Binding Mathces,Mode=TwoWay}" SelectedItem="{Binding SelectedProfile,Mode=TwoWay}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

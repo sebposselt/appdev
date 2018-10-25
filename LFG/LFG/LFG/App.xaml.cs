@@ -5,6 +5,7 @@ using LFG.views;
 using LFG.models;
 using LFG.tools;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
@@ -13,14 +14,14 @@ namespace LFG
     {
         private Random r = new Random(42); //used for fakeprofile function
 
-        private List<Profile> _matches;
+        private ObservableCollection<Profile> _matches;
         private List<Profile> _potentialMatches;
         private Profile _user;
         private Dictionary<string, string> _searchFilter;
 
         public App()
         {
-            _matches = new List<Profile>();
+            _matches = new ObservableCollection<Profile>();
             _potentialMatches = new List<Profile>();
             _user = new Profile();
             _searchFilter = new Dictionary<string, string>();
@@ -31,10 +32,10 @@ namespace LFG
             //profile already exists
 
             //         //</dev>
-            for (int i = 0; i < 10; i++)
-            {
-                _matches.Add(fakeprofile());
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    _matches.Add(fakeprofile());
+            //}
             for (int i = 0; i < 20; i++)
             {
                 _potentialMatches.Add(fakeprofile());
@@ -54,7 +55,7 @@ namespace LFG
             get {return _user; } 
             set {_user = value;}
         }
-        public List<Profile> Mathces
+        public ObservableCollection<Profile> Mathces
         {
             get {return _matches;}
             set {_matches = value;}

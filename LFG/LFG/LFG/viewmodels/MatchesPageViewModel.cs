@@ -19,8 +19,7 @@ namespace LFG.viewmodels
         {
             navManager = NavigationManager.Instance;
             var app = App.Current as App;
-            List<Profile> tmp = app.Mathces;
-            _matches = new ObservableCollection<Profile>(tmp);
+            _matches = app.Mathces;
             DeleteCommand = new Command<Profile>((Profile obj) => Delete(obj));
         }
 
