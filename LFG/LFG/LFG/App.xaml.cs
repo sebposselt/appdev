@@ -8,9 +8,10 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
 using System.Threading.Tasks;
-
 using System.Reflection;
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
@@ -18,7 +19,7 @@ namespace LFG
     public partial class App : Application
     {
         private Random r = new Random(42); //used for fakeprofile function
-        private List<Profile> _matches;
+        private ObservableCollection<Profile> _matches;
         private List<Profile> _potentialMatches;
         private Profile _user;
         private Dictionary<string, string> _searchFilter;
@@ -27,7 +28,7 @@ namespace LFG
 
         public App()
         {
-            _matches = new List<Profile>();
+            _matches = new ObservableCollection<Profile>();
             _potentialMatches = new List<Profile>();
             _user = new Profile();
             _searchFilter = new Dictionary<string, string>();
@@ -39,17 +40,12 @@ namespace LFG
             //profile already exists
 
             //         //</dev>
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    _matches.Add(fakeprofile());
-            //}
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    fakeprofile();
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                fakeprofile();
+            }
             dummyprofile();
                      //</dev>
-
             MainPage = new NavigationPage(new MainPage());
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
@@ -61,7 +57,7 @@ namespace LFG
             get {return _user; } 
             set {_user = value;}
         }
-        public List<Profile> Mathces
+        public ObservableCollection<Profile> Mathces
         {
             get {return _matches;}
             set {_matches = value;}
