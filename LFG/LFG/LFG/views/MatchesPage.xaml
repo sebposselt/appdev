@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage x:Name="matchesage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.MatchesPage">
+<ContentPage x:Name="matchespage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.MatchesPage">
     <ListView x:Name="matchlist" ItemsSource="{Binding Mathces}" SelectedItem="{Binding SelectedProfile,Mode=TwoWay}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.ContextActions>
-                        <MenuItem Text="Delete" IsDestructive="true" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference matchesage}}"/>
+                        <MenuItem Text="Delete" IsDestructive="true" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference matchespage}}"/>
                     </ViewCell.ContextActions>
                     <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Padding="23, 20, 0, 5">
                         <Label x:Name="username" Text="{Binding Username}" HeightRequest="30"

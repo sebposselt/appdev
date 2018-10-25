@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LFG.views.LFGFilterPage">
+    <StackLayout Orientation="Vertical" Padding="13,5">
+        <Label Text="I'm looking for:" HeightRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Region" VerticalOptions="Center" />
+            <Picker x:Name="region" SelectedItem="{Binding Region}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Title="Select Region">
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Language" VerticalOptions="Center" />
+            <Picker x:Name="language" SelectedItem="{Binding Language}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Title="Select Language">
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Age" VerticalOptions="Center" />
+            <Picker x:Name="age" SelectedItem="{Binding Age}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Title="Select Age group">
+            </Picker>
+        </StackLayout>
+        
+        <Button HorizontalOptions="Center" Text="Search" Command="{Binding SearchCommand}" />
+        <!--<Label Text="test" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Fuchsia" TextColor="Black"/>-->
+        <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Fuchsia" IsEnabled="{Binding IsBusy}" Color="Black" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+
+    </StackLayout>
+</ContentPage>

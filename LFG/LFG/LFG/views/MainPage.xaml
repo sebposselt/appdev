@@ -5,6 +5,6 @@
         <ToolbarItem Text="Edit" Order="Primary" Icon="settingHiRes.png" Command="{Binding SettingsCommand}"/>
     </TabbedPage.ToolbarItems>
     <pages:DisplayProfilePage Title="My profile" Icon="user.png"/>
-    <pages:MatchMakingPage Title="LFG" Icon="match.png"/>
+    <pages:LFGFilterPage Title="LFG" Icon="match.png"/>
     <pages:MatchesPage Title="Matches" Icon="teamwork.png"/>
 </TabbedPage>
