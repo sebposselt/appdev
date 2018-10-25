@@ -28,27 +28,14 @@ namespace LFG.views
             for (int i = 0; i < len; i++)
             {
                 var profile = app.PotentialMathces[i];
-                var page = new DisplayProfilePage(profile);
+
+                //var page = new DisplayProfilePage(profile);
+                var page = new YesNoPage(profile);
                 Children.Add(page);
-                PotentialMatches.Add(page);
+                PotentialMatches.Add(page); //not sure if needed.
             }
         }
                 
 
     }
 }
-
-
-//public static void PageRight(this CarouselPage carouselPage)
-//{
-//    var pageCount = carouselPage.Children.Count;
-//    if (pageCount < 2)
-//        return;
-
-//    var index = carouselPage.Children.IndexOf(carouselPage.CurrentPage);
-//    index++;
-//    if (index >= pageCount)
-//        index = 0;
-
-//    carouselPage.CurrentPage = carouselPage.Children[index];
-//}

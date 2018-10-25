@@ -42,7 +42,7 @@ namespace LFG
             dummyprofile();
                      //</dev>
 
-            MainPage = new NavigationPage(new YesNoPage());
+            MainPage = new NavigationPage(new MainPage());
 
 
             NavigationManager.Instance.Navigation = MainPage.Navigation;
