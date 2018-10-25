@@ -35,10 +35,10 @@ namespace LFG
             _DBMediator = new DBMediator();
 
             //         //</dev>
-            for (int i = 0; i < 5; i++)
-            {
-                fakeprofile();
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    fakeprofile();
+            //}
             //first time opening the app
             MainPage = new NavigationPage(new WelcomePage());
 
