@@ -34,19 +34,20 @@ namespace LFG
             _searchFilter = new Dictionary<string, string>();
             _DBMediator = new DBMediator();
 
+            //         //</dev>
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    fakeprofile();
+            //}
             //first time opening the app
-            //MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new WelcomePage());
+
 
             //profile already exists
+            //dummyprofile();
+            //MainPage = new NavigationPage(new MainPage());
+            //          </dev>
 
-            //         //</dev>
-            for (int i = 0; i < 5; i++)
-            {
-                fakeprofile();
-            }
-            dummyprofile();
-                     //</dev>
-            MainPage = new NavigationPage(new MainPage());
             NavigationManager.Instance.Navigation = MainPage.Navigation;
             InitializeComponent();
 
@@ -161,104 +162,5 @@ namespace LFG
             _user.Username += r.Next(1, 1001);
             _DBMediator.PushToDB_DEV(_user);
         }
-
-
-
-        //private void PushToDB()
-        //{
-        //    //opens connection TO azure DB
-        //    SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
-        //    var app = App.Current as App;
-
-        //    //Save data to DB
-        //    string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
-        //        "Values ('" + app.User.Username + "', '" + app.User.Region + "', '" + app.User.Language + "', '" + app.User.Age + "', '" + app.User.ProfileText + "', " +
-        //        "'" + app.User.SteamTag + "', '" + app.User.DiscordTag + "', '" + app.User.XboxLiveTag + "', '" + app.User.PSNTag + "', '" + app.User.Game1.Title + "', '" + app.User.Game2.Title + "'," +
-        //        " '" + app.User.Game3.Title + "', '" + app.User.Game4.Title + "', '" + app.User.Game5.Title + "')";
-
-        //    SqlCommand save = new SqlCommand(push, DB);
-        //    DB.Open();
-        //    save.ExecuteNonQuery();
-        //    DB.Close();
-        //}
-
-        //private void PushToDB2(Profile profile)
-        //{
-        //    User = profile;
-        //    //opens connection TO azure DB
-        //    SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
-        //    var app = App.Current as App;
-
-        //    //serialized Games
-        //    GameSerialization();
-
-        //    //Save data to DB
-        //    string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
-        //        "Values ('" + User.Username + "', '" + User.Region + "', '" + User.Language + "', '" + User.Age + "', '" + User.ProfileText + "', " +
-        //        "'" + User.SteamTag + "', '" + User.DiscordTag + "', '" + User.XboxLiveTag + "', '" + User.PSNTag + "', '" + Game1 + "', '" + Game2 + "'," +
-        //        " '" + Game3 + "', '" + Game4 + "', '" + Game5 + "')";
-
-        //    SqlCommand save = new SqlCommand(push, DB);
-        //    DB.Open();
-        //    save.ExecuteNonQuery();
-        //    DB.Close();
-        //}
-
-        //private void PullFromDB()
-        //{
-
-        //    //opens connection TO azure DB
-        //    SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
-
-        //    SqlCommand cmd = new SqlCommand();
-        //    SqlDataReader reader;
-
-        //    cmd.CommandText = "SELECT * FROM LFGdb";
-        //    cmd.CommandType = CommandType.Text;
-        //    cmd.Connection = DB;
-
-        //    DB.Open();
-
-        //    reader = cmd.ExecuteReader();
-        //    // Data is accessible through the DataReader object here.
-        //    if (reader.HasRows)
-        //    {
-        //        while (reader.Read())
-        //        {
-        //            Profile tmp = new Profile();
-        //            for (int i = 0; i < reader.FieldCount; i++)
-        //            {
-        //                string propertyName = reader.GetName(i);
-        //                string data = reader.GetValue(i).ToString();
-        //                if (propertyName.StartsWith("ID")) {
-        //                    isID = true;
-        //                } else {
-        //                    isID = false;
-        //                }
-
-        //                if (propertyName.StartsWith("Game")) {
-        //                    Game tmpGame = new Game();
-        //                    tmpGame = JsonConvert.DeserializeObject<Game>(data);
-        //                    tmp[propertyName] = tmpGame;
-        //                }
-        //                else {
-        //                    if (!isID) {
-        //                        tmp[propertyName] = data;
-        //                    }
-        //                }
-        //            }
-        //            PotentialMathces.Add(tmp);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("No rows found.");
-        //    }
-        //    reader.Close();
-        //    DB.Close();
-        //}
-
-
-
     }
 }

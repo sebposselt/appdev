@@ -45,7 +45,8 @@ namespace LFG.views
             //Check if there is 1 or 0 matches left.
             if (pageCount < 2)
             {
-                NavigationManager.Instance.SwitchPage(new MainPage());
+
+                NavigationManager.Instance.SwitchPagePopCurrent(new MainPage());
                 carouselPage.Children.Clear();
                 return;
             }
