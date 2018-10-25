@@ -30,5 +30,7 @@ namespace LFG.views
             InitializeComponent();
         }
 
+
+
     }
 }

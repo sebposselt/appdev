@@ -30,5 +30,10 @@ namespace LFG.views
             private set { _profile = value; }
         }
 
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            var tmp = this.Parent as MatchMakingPage;
+            tmp.RemoveAndGoToNext();
+        }
     }
 }
