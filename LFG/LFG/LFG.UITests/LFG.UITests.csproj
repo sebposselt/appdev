@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -32,22 +32,14 @@
     <PackageReference Include="Xamarin.UITest" Version="2.2.6" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LFG.iOS\LFG.iOS.csproj">
-      <Project>{CF32E7C8-F547-4646-AC32-3E9B825569A1}</Project>
-      <Name>LFG.iOS</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\LFG.Android\LFG.Android.csproj">
-      <Project>{8C5DD4E1-7BA8-421D-BDDB-2F029F99D567}</Project>
-      <Name>LFG.Android</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LFG\LFG.csproj">
+      <Project>{5b25124d-9177-4310-915a-e584ddaf15e1}</Project>
+      <Name>LFG</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

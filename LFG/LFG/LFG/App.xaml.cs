@@ -10,7 +10,7 @@ using System.Data;
 using System.Threading.Tasks;
 
 using System.Reflection;
-
+using Newtonsoft.Json;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LFG
@@ -22,6 +22,11 @@ namespace LFG
         private List<Profile> _potentialMatches;
         private Profile _user;
         private Dictionary<string, string> _searchFilter;
+        private string Game1;
+        private string Game2;
+        private string Game3;
+        private string Game4;
+        private string Game5;
 
 
         public App()
@@ -41,15 +46,15 @@ namespace LFG
             //{
             //    _matches.Add(fakeprofile());
             //}
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    fakeprofile();
-            //    //Profile tmp = fakeprofile();
-            //    //Task.Run(() =>
-            //    //{
-            //    //    PushToDB2(tmp);
-            //    //});
-            //}
+            for (int i = 0; i < 20; i++)
+            {
+                fakeprofile();
+                //Profile tmp = fakeprofile();
+                //Task.Run(() =>
+                //{
+                //    PushToDB2(tmp);
+                //});
+            }
             dummyprofile();
 
 
@@ -200,11 +205,14 @@ namespace LFG
             SqlConnection DB = new SqlConnection("Server=tcp:lfgserver.database.windows.net,1433;Initial Catalog = LFGdb; Persist Security Info=False;User ID =QUT; Password=Lfgapp123; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
             var app = App.Current as App;
 
+            //serialized Games
+            GameSerialization();
+
             //Save data to DB
             string push = "Insert into [LFGdb](Username, Region, Language, Age, ProfileText, SteamTag, DiscordTag, XboxLiveTag, PSNTag, Game1, Game2, Game3, Game4, Game5) " +
                 "Values ('" + User.Username + "', '" + User.Region + "', '" + User.Language + "', '" + User.Age + "', '" + User.ProfileText + "', " +
-                "'" + User.SteamTag + "', '" + User.DiscordTag + "', '" + User.XboxLiveTag + "', '" + User.PSNTag + "', '" + User.Game1.Title + "', '" + User.Game2.Title + "'," +
-                " '" + User.Game3.Title + "', '" + User.Game4.Title + "', '" + User.Game5.Title + "')";
+                "'" + User.SteamTag + "', '" + User.DiscordTag + "', '" + User.XboxLiveTag + "', '" + User.PSNTag + "', '" + Game1 + "', '" + Game2 + "'," +
+                " '" + Game3 + "', '" + Game4 + "', '" + Game5 + "')";
 
             SqlCommand save = new SqlCommand(push, DB);
             DB.Open();
@@ -238,11 +246,14 @@ namespace LFG
                     {
                         string propertyName = reader.GetName(i);
                         string data = reader.GetValue(i).ToString();
-                        if (propertyName.StartsWith("Game") )
-                        {
-                            continue;
+                        if (propertyName.StartsWith("Game")) {
+                            Game tmpGame = new Game();
+                            tmpGame = JsonConvert.DeserializeObject<Game>(data);
+                            tmp[propertyName] = tmpGame;
                         }
-                        tmp[propertyName] = data;
+                        else {
+                            tmp[propertyName] = data;
+                        }
                     }
                     PotentialMathces.Add(tmp);
                 }
@@ -255,6 +266,13 @@ namespace LFG
             DB.Close();
         }
 
+        private void GameSerialization() {
+            Game1 = JsonConvert.SerializeObject(User.Game1);
+            Game2 = JsonConvert.SerializeObject(User.Game2);
+            Game3 = JsonConvert.SerializeObject(User.Game3);
+            Game4 = JsonConvert.SerializeObject(User.Game4);
+            Game5 = JsonConvert.SerializeObject(User.Game5);
+        }
 
     }
 }
