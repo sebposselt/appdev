@@ -15,7 +15,10 @@ namespace LFG.viewmodels
 
         public void PullFromDB()
         {
-            SqlCommand Pull = new SqlCommand("SELECT TOP 2 Username, Region, Language,Age, DiscordTag FROM LFGdb ORDER by newid()");
+            DB.Open();
+            SqlCommand Pull = new SqlCommand("SELECT TOP 2 Username, Region, Language,Age, DiscordTag FROM LFGdb ORDER by newid()", DB);
+            // show function
+            DB.Close();
 
         }  
     }
