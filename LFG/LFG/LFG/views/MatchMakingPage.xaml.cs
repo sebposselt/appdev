@@ -28,11 +28,8 @@ namespace LFG.views
             for (int i = 0; i < len; i++)
             {
                 var profile = app.PotentialMathces[i];
-
-                //var page = new DisplayProfilePage(profile);
                 var page = new YesNoPage(profile);
                 Children.Add(page);
-                PotentialMatches.Add(page); //not sure if needed.
             }
         }
                 

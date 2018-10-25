@@ -5,12 +5,14 @@
             
         </StackLayout>
         <RelativeLayout HeightRequest="90">
-            <Button Text="YES" BackgroundColor="Green" TextColor="Black" BorderWidth="3" BorderColor="Black" FontSize="Large" HeightRequest="60" 
+            <Button Text="YES" Clicked="Handle_Clicked"
+                    BackgroundColor="Green" TextColor="Black" BorderWidth="3" BorderColor="Black" FontSize="Large" HeightRequest="60" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Constant=60}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}" 
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=-90}" />
-            <Button Text="NO" BackgroundColor="Red" TextColor="Black" BorderWidth="3" BorderColor="Black" FontSize="Large" HeightRequest="60" 
+            <Button Text="NO" Clicked="Handle_Clicked_1"
+                    BackgroundColor="Red" TextColor="Black" BorderWidth="3" BorderColor="Black" FontSize="Large" HeightRequest="60" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5}" 
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Constant=60}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5}" 
